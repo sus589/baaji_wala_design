@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <linearGradient x1="50%" y1="1.23259516e-30%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFDB84" offset="0%"></stop>
+            <stop stop-color="#FFB80C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="37.0605469%" y1="33.5356405%" x2="71.6926788%" y2="58.2324414%" id="linearGradient-2">
+            <stop stop-color="#054EA1"  offset="0%"></stop>
+            <stop stop-color="#054EA1"  offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <path d="M22,16 L9.02774048,0 L18.6666667,0 C20.5073333,0 22,1.49266667 22,3.33333333 L22,16 Z" id="Fill-1" fill="url(#linearGradient-1)"></path>
+            <polygon id="Fill-3" fill="url(#linearGradient-2)" points="0 0 22 16 9.02774048 0"></polygon>
+        </g>
+    </g>
+</svg>
