@@ -1,21 +1,24 @@
-.desktop-header-main{
+.desktop-header-main {
     position: relative;
     background-color: #2254ba;
     height: 50px;
     width: 100%;
 }
-.desktop-logo{
-   position: absolute;
-   z-index:99;
-   margin-top: -57px;
-   left: 65px;
+
+.desktop-logo {
+    position: absolute;
+    z-index: 99;
+    margin-top: -57px;
+    left: 65px;
 }
-.desktop-logo img{
+
+.desktop-logo img {
     width: 109px;
     height: 52px;
     margin-left: 16px;
 }
-.desktop-btn{
+
+.desktop-btn {
     position: relative;
     display: inline-block;
     background-image: linear-gradient(90deg, #0b2966, #030f26 100%, #030e23);
@@ -26,8 +29,9 @@
     box-shadow: 0 0 4px #ffffff80;
     border-radius: 5px;
 }
-.desktop-btn li{
-      list-style: none;
+
+.desktop-btn li {
+    list-style: none;
     background-color: #fff;
     /* z-index: 999; */
     width: 29px;
@@ -36,7 +40,7 @@
     transform: translate(-14px, -10px);
 }
 
-.desktop-header-button{
+.desktop-header-button {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -44,11 +48,11 @@
     right: 0;
     transform: translate(-62px, -43px);
     gap: 5px;
-    
+
 }
 
-.sign-up-btn{
-   display: inline-block;
+.sign-up-btn {
+    display: inline-block;
     width: 77px;
     height: 33px;
     background: linear-gradient(180deg, #e5e5e5 0%, #a4a4a4 100%);
@@ -59,27 +63,122 @@
 
 }
 
-.login-btn{
+.login-btn {
     background: #ffb80c;
     color: #222;
-     width: 77px;
+    width: 77px;
     height: 33px;
-     border-radius: 7px;
+    border-radius: 7px;
     padding: 4px;
     text-align: center;
 
 }
 
-.desktop-logo-right{
+.desktop-logo-right {
     /* position: fixed; */
     position: absolute;
     right: 0;
     transform: translate(-11px, -43px);
 
 }
-.desktop-logo-right img{
+
+.desktop-logo-right img {
     width: 34px;
     height: 34px;
 }
 
+.desktop-logo .toggle-btn {
+    display: none;
+}
 
+.sports-btn {
+    display: none;
+}
+
+/* tips 1 start */
+
+.header {
+    /* height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  background: #222;
+  color: #fff; */
+}
+
+.desktop-btn {
+    transition: transform 0.3s ease;
+}
+
+.sidebar-open .desktop-btn {
+    transform: translateX(200px);
+}
+
+
+/* tips 1 end */
+
+
+
+@media(min-width:768px) {
+    .desktop-btn {
+        display: none;
+    }
+
+    .desktop-logo {
+        margin-top: 0;
+        display: flex;
+    }
+
+    .desktop-header-button {
+        transform: translate(-60px, 11px);
+    }
+
+    .desktop-logo-right {
+        transform: translate(-11px, 12px);
+    }
+
+    .desktop-logo .toggle-btn img {
+        width: 20px;
+        height: 20px;
+        filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
+    }
+
+    .desktop-logo .toggle-btn {
+        display: block;
+        background: #e5e5e5;
+        width: 55px;
+        height: 30px;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    .sports-btn {
+        display: block;
+        padding: 10px;
+        width: 230px;
+        height: 40px;
+        border-radius: 5px;
+        background: #e5e5e5;
+        color: #0e2749;
+        /* margin: auto; */
+        transform: translate(-6px, 5px);
+    }
+
+    .sports-btn img {
+        filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
+        width: 25px;
+        transform: translate(50px, -15px);
+    }
+
+    .sports-btn p {
+        font-weight: 600;
+        font-size: 14px;
+        transform: translate(100px, -52px);
+    }
+
+    .desktop-logo {
+        left: 16px;
+    }
+
+}

@@ -98,6 +98,23 @@
   text-overflow: ellipsis; */
    }
 
+
+/* tips 1 start  */
+   .footer {
+  height: 50px;
+  /* background: #111; */
+  color: #fff;
+  /* padding: 10px 80px; */
+  /* transition: all 0.3s ease; */
+}
+
+.sidebar-open {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+/* tips 1 end  */
+
    @media(min-width:768px) {
      .about {
        width: 98%;

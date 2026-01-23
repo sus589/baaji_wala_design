@@ -1,30 +1,40 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="desktop-header-main">
+<div class="header container-fluid">
+  <div class="row">
+    <div class="desktop-header-main" [class.sidebar-open]="isSidebarOpen">
 
-          <div class="desktop-btn">
-            <li></li>
-            <li></li>
-            <li></li>
-          </div>
+      <div class="desktop-btn">
+        <li></li>
+        <li></li>
+        <li></li>
+      </div>
 
-        
-
-         <div class="desktop-logo"><img src="assets\images\Logo.svg" alt=""></div>
-           
-
-         <div class="desktop-header-button"> 
-            <div class="sign-up-btn">Sign up</div>
-            <div class="login-btn">Login</div>
-         </div>
-
-
-          <div class="desktop-logo-right">
-            <img src="assets\images\IN.webp" alt="">
+      <div class="desktop-logo">
+        <div class="sports-btn">
+          <img src="assets/images/icon-cricket.svg" alt="">
+          <p>Cricket</p>
         </div>
+
+
+        <div class="toggle-btn" (click)="onDesktopBtnClick()">
+          <img src="assets/images/accordion-arrow.svg" alt="">
         </div>
-         
-       
-         
+        <img src="assets/images/Logo.svg" alt="">
+      </div>
+
+
+      <div class="desktop-header-button">
+        <div class="sign-up-btn">Sign up</div>
+        <div class="login-btn">Login</div>
+      </div>
+
+
+      <div class="desktop-logo-right">
+        <img src="assets\images\IN.webp" alt="">
+      </div>
     </div>
+
+
+
+  </div>
 </div>
+

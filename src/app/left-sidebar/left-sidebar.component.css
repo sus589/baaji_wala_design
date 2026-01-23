@@ -1,0 +1,42 @@
+.sidebar {
+    background-color: #fff;
+    width: 250px;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.nav-item-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 8px;
+}
+
+.nav-item-icon {
+    filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
+    width: 20px;
+    height: 24px;
+}
+
+.nav-item-text {
+    font-weight: 600;
+    font-size: 14px;
+    color: #052753;
+    margin: auto 0;
+    margin-left: 20px;
+    margin-right: 60px;
+
+}
+
+.nav-item-arrow {
+    width: 18px;
+    height: 26px;
+    filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
+}
+
+/* @media(min-width:768px){
+    .sidebar{
+        display: block;
+    }
+} */

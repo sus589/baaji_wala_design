@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
-  imports: [],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  selector: 'app-left-sidebar',
+  imports: [CommonModule , NgIf],
+  templateUrl: './left-sidebar.component.html',
+  styleUrl: './left-sidebar.component.css'
 })
-export class FooterComponent {
+export class LeftSidebarComponent {
 isSidebarOpen = false;
 
   constructor(private sidebarService: SidebarService) {
