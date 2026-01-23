@@ -7,7 +7,7 @@
 
 .desktop-logo {
     position: absolute;
-    z-index: 99;
+    /* z-index: 99; */
     margin-top: -57px;
     left: 65px;
 }
