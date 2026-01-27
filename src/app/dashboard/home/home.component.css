@@ -179,18 +179,21 @@ h3 {
 .home {
     width: 100%;
     padding: 16px;
+    transform: translate(-25px, 34px);
     /* transition: all 0.3s ease; */
+    /* position: relative; */
+    /* z-index: -99; */
 }
 
 .sidebar-open {
     width: calc(100% - 250px);
-    /* margin-left: 240px; */
+    margin-left: 240px;
 }
 
 .layout {
     display: flex;
     width: 100%;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 
 /* tips 1 end*/

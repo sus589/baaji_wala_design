@@ -15,4 +15,21 @@ isSidebarOpen = false;
     this.sidebarService.sidebarOpen$
       .subscribe(state => this.isSidebarOpen = state);
   }
+ 
+
+  activeTab: boolean = false;
+  changeTab(){
+    this.activeTab = !this.activeTab;
+  }
+
+
+  openMenu: string | null = null;
+
+  toggleMenu(menu:any){
+   if(this.openMenu === menu){
+     this.openMenu = null;
+   }else{
+    this.openMenu = menu;
+   }
+  }
 }

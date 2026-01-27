@@ -1,65 +1,147 @@
-<div class="container-fluid" >
-    <div class="row">
-        <div class="sidebar" *ngIf="isSidebarOpen">
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="sidebar" *ngIf="isSidebarOpen">
+      <div class="nav-item-head active">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+      </div>
 
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-           <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
-
-          <div class="nav-item-head">
-            <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-            <p class="nav-item-text">Home</p>
-            <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-          </div>
+      <div class="nav-items-collapse" (click)="toggleMenu('casino')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+          <p class="nav-item-text">Home</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="openMenu === 'casino'">
         </div>
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'casino'">
+          <ul>
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-items-collapse" (click)="toggleMenu('hot-game')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+          <p class="nav-item-text">Home</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="openMenu === 'hot-game'">
+        </div>
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'hot-game'">
+          <ul>
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="nav-items-collapse" (click)="changeTab()">
+        <div class="nav-item-head" (click)="toggleMenu('table')">
+          <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+          <p class="nav-item-text">Home</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="openMenu === 'table'">
+        </div>
+
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'table'">
+          <ul>
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="list-items">
+                <img src="assets/images/provider-jilisuperace.png" alt="">
+                <p>Super Ace</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-item-head">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" >
+      </div>
+
+      <div class="nav-item-head">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+      </div>
+
+      <div class="nav-item-head">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+      </div>
+
+      <div class="nav-item-head">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+      </div>
+
+      <div class="nav-item-head">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+      </div>
+
+      <div class="nav-item-head">
+        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
+        <p class="nav-item-text">Home</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+      </div>
     </div>
+  </div>
 </div>

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { SidebarService } from '../sidebar.service';
 import { AsideComponent } from '../aside/aside.component';
 
 @Component({
   selector: 'app-desktop-header',
-  imports: [AsideComponent],
+  imports: [AsideComponent , RouterLink],
   templateUrl: './desktop-header.component.html',
   styleUrl: './desktop-header.component.css'
 })
@@ -23,6 +23,8 @@ export class DesktopHeaderComponent {
     this.sidebarService.toggleSidebar();
   }
   
-
+  clickBtn(){
+    this.route.navigate(['/aside'])
+  }
 
 }

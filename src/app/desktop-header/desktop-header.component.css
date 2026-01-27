@@ -1,8 +1,9 @@
 .desktop-header-main {
-    position: relative;
+    position: fixed;
     background-color: #2254ba;
     height: 50px;
     width: 100%;
+    z-index: 9;
 }
 
 .desktop-logo {
@@ -97,15 +98,6 @@
 
 /* tips 1 start */
 
-.header {
-    /* height: 60px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0 16px;
-  background: #222;
-  color: #fff; */
-}
 
 .desktop-btn {
     transition: transform 0.3s ease;

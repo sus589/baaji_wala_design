@@ -40,49 +40,49 @@
     <div class="row">
         <div class="nav-container">
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont active">
+                <div class="nav-small-cont" (click)="changeTab('hot-game')" [class.active]="activeTab === 'hot-game'">
                     <img src="assets\images\icon-hotgame.svg" alt="">
                     <p>HOT GAME</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('casino')" [class.active]="activeTab === 'casino'">
                     <img src="assets\images\icon-casino.svg" alt="">
                     <p>LIVE CASINO</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('sports')" [class.active]="activeTab === 'sports'">
                     <img src="assets\images\icon-sport.svg" alt="">
                     <p>SPORTS</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('table')" [class.active]="activeTab === 'table'">
                     <img src="assets\images\icon-crash.svg" alt="">
                     <p>CRASH</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('lottery')" [class.active]="activeTab === 'lottery'">
                     <img src="assets\images\icon-slot.svg" alt="">
                     <p>SLOTS</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('sport')" [class.active]="activeTab === 'sport'">
                     <img src="assets\images\icon-sport.svg" alt="">
                     <p>SPORTS</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('crash')" [class.active]="activeTab === 'crash'">
                     <img src="assets\images\icon-crash.svg" alt="">
                     <p>CRASH</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
-                <div class="nav-small-cont">
+                <div class="nav-small-cont" (click)="changeTab('slot')" [class.active]="activeTab === 'slot'">
                     <img src="assets\images\icon-slot.svg" alt="">
                     <p>SLOTS</p>
                 </div>
@@ -93,16 +93,17 @@
 
 <div class="container pt-2">
     <div class="row">
-        <div class="nav-category">
+        @if(activeTab === 'hot-game'){
+   <div class="nav-category">
             <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
-                <div class="nav-cont-small-div">
+                <div class="nav-cont-small-div" >
                     <span style="background-image: url('assets/images/card-triangle.svg');"></span>
                     <img src="assets/images/provider-jilisuperace.png" alt="">
                     <p>Super Ace</p>
                 </div>
             </div>
             <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
-                <div class="nav-cont-small-div">
+                <div class="nav-cont-small-div" >
                     <span style="background-image: url('assets/images/card-triangle.svg');"></span>
                     <img src="assets\images\provider-jilisuperace.png" alt="">
                     <p>Super Ace</p>
@@ -224,6 +225,80 @@
 
 
         </div>
+        }
+     
+         @if(activeTab === 'casino'){
+            <div class="nav-category">
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div" >
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets/images/provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div" >
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+           
+
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+            <div class="col col-sm-3 col-md-21 col-lg-2 col-xl-2">
+                <div class="nav-cont-small-div">
+                    <span style="background-image: url('assets/images/card-triangle.svg');"></span>
+                    <img src="assets\images\provider-jilisuperace.png" alt="">
+                    <p>Super Ace</p>
+                </div>
+            </div>
+
+
+        </div>
+         }
+       
     </div>
 </div>
 <div class="container">

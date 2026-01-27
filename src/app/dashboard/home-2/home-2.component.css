@@ -1,0 +1,111 @@
+ .wrap{
+      background:#0b2341;
+      color:#fff;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== TOP TABS ===== */
+    .top-tabs{
+      background:#0d3c8c;
+      /* padding:6px; */
+      display:flex;
+      border-radius:6px;
+      gap:6px;
+      margin-top:60px;
+      width: 76%;
+    }
+    .top-tabs .tab{
+      padding:6px 8px;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .top-tabs .active{
+      background:#0a5cff;
+    }
+
+    /* ===== SPORTS ICON BAR ===== */
+    .sports-bar{
+      background:#144da3;
+      padding:20px 0;
+    }
+    .sport-item{
+      text-align:center;
+      color:#fff;
+      position:relative;
+      font-size:14px;
+    }
+    .sport-item span.badge{
+      position:absolute;
+      top:-4px;
+      right:18px;
+    }
+    .sport-item img{
+        width: 30px;
+    }
+
+    /* ===== FILTER BAR ===== */
+    .filter-bar{
+      background:#0e2b4f;
+      padding:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    /* ===== MARKET HEADER ===== */
+    .league-header{
+      background:#0a4fa3;
+      padding:10px;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-weight:600;
+    }
+
+    /* ===== MATCH CARD ===== */
+    .match-card{
+      background:#fff;
+      color:#000;
+      border-radius:6px;
+      /* margin-top:6px; */
+      padding:10px;
+    }
+
+    .inplay{
+      background:#1fb15a;
+      color:#fff;
+      padding:2px 6px;
+      border-radius:4px;
+      font-size:12px;
+    }
+
+    /* ===== BACK LAY ===== */
+    .back{
+      background:#8fd0ff;
+      text-align:center;
+      padding:10px;
+      border-radius:4px;
+      font-weight:600;
+    }
+    .lay{
+      background:#ffb3c1;
+      text-align:center;
+      padding:10px;
+      border-radius:4px;
+      font-weight:600;
+    }
+
+    @media(min-width:768px){
+        .wrap{
+            max-width:480px;
+            margin: auto;
+        }
+    }
+    @media (min-width: 992px) {
+    .container {
+        padding: 5px;
+    }
+}

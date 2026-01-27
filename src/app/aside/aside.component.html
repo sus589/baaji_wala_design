@@ -1,7 +1,7 @@
-<div class="container sidebar pt-5">
+<div class="container sidebar">
     <div class="row">
 
-        <div class="menu">
+        <div class="menu" (click)="goback()">
             <img src="assets/images/icon-close.svg" alt="">
         </div>
 
@@ -26,11 +26,11 @@
                     </div>
                 </div>
                 <div class="menu-list-two">
-                    <div class="menu-box">
+                    <div class="menu-box" (click)="changeTab('casino')" [class.active]="activeTab === 'casino'">
                         <img src="assets/images/icon-cricket.svg" alt="">
                         <p>Cricket</p>
                     </div>
-                    <div class="menu-box">
+                    <div class="menu-box" (click)="changeTab('table')" [class.active]="activeTab === 'table'">
                         <img src="assets/images/icon-cricket.svg" alt="">
                         <p>Cricket</p>
                     </div>
@@ -70,9 +70,9 @@
             </div>
 
 
-            <div class="menu-bar-side">
+            <div class="menu-bar-side" *ngIf="activeTab === 'casino'">
                 <ul>
-                    <li>
+                    <li routerLink="/dashboard/games/LIVE">
                         <img src="assets/images/icon-all-provider.svg" alt="">
                         <p>All Provider</p>
                     </li>
@@ -81,8 +81,33 @@
                         <p>PP</p>
                     </li>
                     <li>
+                        <img src="assets/images/PT.webp" alt="">
+                        <p>PT</p>
+                    </li>
+                    <li>
                         <img src="assets/images/icon-all-provider.svg" alt="">
-                        <p>YL</p>
+                        <p>HJ</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="menu-bar-side" *ngIf="activeTab === 'table'">
+                <ul>
+                    <li>
+                        <img src="assets/images/EVOPLAY.webp" alt="">
+                        <p>EVOPLAY</p>
+                    </li>
+                    <li>
+                        <img src="assets/images/PT.webp" alt="">
+                        <p>PT</p>
+                    </li>
+                    <li>
+                        <img src="assets/images/SPRIBE.webp" alt="">
+                        <p>SPRIBE</p>
                     </li>
                     <li>
                         <img src="assets/images/icon-all-provider.svg" alt="">

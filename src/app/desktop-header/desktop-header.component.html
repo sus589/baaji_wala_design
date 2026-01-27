@@ -2,14 +2,14 @@
   <div class="row">
     <div class="desktop-header-main" [class.sidebar-open]="isSidebarOpen">
 
-      <div class="desktop-btn">
+      <div class="desktop-btn" (click)="clickBtn()">
         <li></li>
         <li></li>
         <li></li>
       </div>
 
       <div class="desktop-logo">
-        <div class="sports-btn">
+        <div class="sports-btn" routerLink="dashboard/sports">
           <img src="assets/images/icon-cricket.svg" alt="">
           <p>Cricket</p>
         </div>
