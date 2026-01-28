@@ -124,6 +124,36 @@
 .filter-bar select{
    border: none
  }
+ 
+/* time  */
+ .filter-bar select{
+   border: none;
+   padding: 8px;
+    border-radius: 6px;
+ }
+ .item-list{
+  display: flex;
+  
+  color: #000;
+  padding: 10px;
+ 
+  position: relative;
+ }
+
+ .item-text h3{
+  font-size: 18px;
+  font-weight: 600;
+ }
+ .item-list-parent{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+   border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 6x;
+ }
+/* time  */
+
  @media(min-width:768px) {
      .wrap {
          max-width: 480px;

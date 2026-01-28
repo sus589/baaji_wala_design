@@ -11,6 +11,7 @@ import { ParlayComponent } from './dashboard/parlay/parlay.component';
 import { LoginComponent } from './login/login.component';
 import { MatchComponent } from './match/match.component';
 import { PremiumParlayComponent } from './premium-parlay/premium-parlay.component';
+import { CasinoAllComponent } from './casino-all/casino-all.component';
 
 export const routes: Routes = [
     {path:'',component: HomeComponent},
@@ -27,7 +28,8 @@ export const routes: Routes = [
     {path:'footer', component:FooterComponent},
     {path:'left-sidebar', component:LeftSidebarComponent},
     {path:'aside', component:AsideComponent},
-    {path:'login' , component:LoginComponent}
+    {path:'login' , component:LoginComponent},
+    {path:'casinoAll', component: CasinoAllComponent}
 ];
 
 

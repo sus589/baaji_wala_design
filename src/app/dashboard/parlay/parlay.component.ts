@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { LeftSidebarComponent } from '../../left-sidebar/left-sidebar.component';
 import { SidebarService } from '../../sidebar.service';
 import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-parlay',
-  imports: [LeftSidebarComponent , RouterLink],
+  imports: [LeftSidebarComponent , RouterLink , CommonModule],
   templateUrl: './parlay.component.html',
   styleUrl: './parlay.component.css'
 })
@@ -19,7 +20,9 @@ isSidebarOpen = false;
 
   activeTab : string = 'live';
 
-  changeTab(tab:any){
-    this.activeTab = tab;
+  changeTab(event:Event){
+    // this.activeTab = tab;
+    const  value = (event.target as HTMLSelectElement).value;
+    this.activeTab = value;
   }
 }
