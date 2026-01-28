@@ -1,0 +1,153 @@
+ .wrap {
+     background: #0b2341;
+     color: #fff;
+     font-family: Arial, sans-serif;
+ }
+
+ /* ===== TOP TABS ===== */
+ .top-tabs {
+     background: #0d3c8c;
+     /* padding:6px; */
+     display: flex;
+     border-radius: 6px;
+     gap: 6px;
+     margin-top: 60px;
+     width: 66%;
+ }
+
+ .top-tabs .tab {
+     padding: 6px 6px;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 600;
+ }
+
+ .top-tabs .active {
+     background: #0a5cff;
+ }
+
+ .top-tabs .tab-icon {
+     padding: 6px 46px;
+     border-radius: 6px;
+     cursor: pointer;
+     font-weight: 600;
+     background-color: #58a608;
+ }
+
+ /* ===== SPORTS ICON BAR ===== */
+ .sports-bar {
+     background: #144da3;
+     padding: 10px 0;
+ }
+
+ .sport-item {
+     text-align: center;
+     color: #fff;
+     position: relative;
+     font-size: 14px;
+ }
+
+ .sport-item span.badge {
+     position: absolute;
+     top: -4px;
+     right: 18px;
+ }
+
+ .sport-item img {
+     width: 30px;
+ }
+
+ .sport-item::before {
+     /* content: "\e92a"; */
+
+ }
+
+ /* ===== FILTER BAR ===== */
+ .filter-bar {
+     background: #0e2b4f;
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ /* ===== MARKET HEADER ===== */
+ .league-header {
+     background: #0a4fa3;
+     padding: 10px;
+     border-top-left-radius: 6px;
+     border-top-right-radius: 6px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-weight: 600;
+ }
+
+ /* ===== MATCH CARD ===== */
+ .match-card {
+     background: #fff;
+     color: #000;
+     border-radius: 6px;
+     /* margin-top:6px; */
+     padding: 10px;
+ }
+
+ .inplay {
+     background: #1fb15a;
+     color: #fff;
+     padding: 2px 6px;
+     border-radius: 4px;
+     font-size: 12px;
+ }
+
+ /* ===== BACK LAY ===== */
+ .back {
+     background: #8fd0ff;
+     text-align: center;
+     padding: 10px;
+     border-radius: 4px;
+     font-weight: 600;
+ }
+
+ .lay {
+     background: #ffb3c1;
+     text-align: center;
+     padding: 10px;
+     border-radius: 4px;
+     font-weight: 600;
+ }
+
+ .sidebar-open {
+     width: calc(100% - 250px);
+     margin-left: 240px;
+ }
+.filter-bar select{
+   border: none
+ }
+ @media(min-width:768px) {
+     .wrap {
+         max-width: 480px;
+         margin: auto;
+     }
+
+     .top-tabs {
+         width: 62%;
+     }
+
+     .sports-bar {
+         margin-top: -5px;
+     }
+
+     .all-back {
+         background-image: url('/assets/images/imgi_27_bg-cricket.png');
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+     }
+ }
+
+ @media (min-width: 992px) {
+     .container {
+         padding: 5px;
+     }
+ }

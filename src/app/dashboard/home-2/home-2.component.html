@@ -1,104 +1,410 @@
-<div class="container wrap" >
-    <div class="row">
-       <div >
-         <!-- Top Tabs (Live / Upcoming / Leagues / Parlay) -->
-        <div class="container mt-2">
-            <div class="top-tabs">
-                <div class="tab active">Live</div>
-                <div class="tab">Upcoming</div>
-                <div class="tab">Leagues</div>
-                <div class="tab text-success">Parlay</div>
+<app-left-sidebar></app-left-sidebar>
+<div [class.sidebar-open]="isSidebarOpen" class="all-back">
+    <div class="container wrap">
+        <div class="row">
+            <div>
+                <!-- Top Tabs (Live / Upcoming / Leagues / Parlay) -->
+                <div class="container mt-2">
+                    <div class="top-tabs">
+                        <div class="tab" (click)="changeTab('live')" [class.active]="activeTab === 'live'">Live</div>
+                        <div class="tab" (click)="changeTab('upcoming')" [class.active]="activeTab === 'upcoming'">
+                            Upcoming
+                        </div>
+                        <div class="tab" (click)="changeTab('league')" [class.active]="activeTab === 'league'">Leagues
+                        </div>
+                        <div class="tab text-success" routerLink="/dashboard/sport-parlay">Parlay</div>
+                    </div>
+                </div>
+                <!-- Sports Icon Bar -->
+                <div class="sports-bar">
+                    <div class="container">
+                        <div class="row text-center">
+                            <div class="col sport-item">
+                                <img src="assets/images/chip.webp" alt="">
+                                Casino
+                            </div>
+                            <div class="col sport-item">
+                                <img src="assets/images/chip.webp" alt="">
+                                <p>My Fav</p>
+                                <span class="badge bg-warning text-dark">0</span>
+                            </div>
+                            <div class="col sport-item active">
+                                <img src="assets/images/chip.webp" alt="">
+                                Cricket <span class="badge bg-danger">5</span>
+                            </div>
+                            <div class="col sport-item">
+                                <img src="assets/images/chip.webp" alt="">
+                                Soccer <span class="badge bg-warning text-dark">8</span>
+                            </div>
+                            <div class="col sport-item">
+                                <img src="assets/images/chip.webp" alt="">
+                                Tennis <span class="badge bg-warning text-dark">12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Filter Bar -->
+                <div class="filter-bar mt-2">
+                    <!-- <button class="btn btn-light btn-sm"> -->
+                    <select name="" id="" (change)="changeTab($any($event.target).value)">
+                        <option value="live"> ⇅ by Competition</option>
+                        <option value="time"> ⇅ by Time
+                        </option>
+                    </select>
+                    <!-- </button> -->
+
+                    <button class="btn btn-light btn-sm">
+                        Collapse <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+
+
+
+
+                @if(activeTab === 'live'){
+                <!-- League + Match (One Day Internationals) -->
+                <div class="container">
+                    <div class="league-header">
+                        One Day Internationals
+                        <span class="badge bg-primary">1</span>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="bi bi-star star"></i>
+                                <strong>Sri Lanka v England</strong><br>
+                                <span class="inplay">In-play</span>
+                                <small class="text-muted">Matched 0.00</small>
+                            </div>
+                            <div>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Women’s Premier League (Back / Lay) -->
+                <div class="container mt-3">
+                    <div class="league-header">
+                        Women_s Premier League
+                        <span class="badge bg-primary">1</span>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="d-flex justify-content-between mb-2" style="background-color: #4b6cb6; color: #fff">
+                            <div>
+                                <i class="bi bi-star star"></i>
+                                <strong>Gujarat Giants W v Delhi Capitals W</strong><br>
+                            </div>
+                        </div>
+
+                        <div class="row text-center fw-bold mb-1">
+
+                            <div class="col-8"> <span class="inplay-btn">In-play</span></div>
+                            <div class="col-2">Back</div>
+                            <div class="col-2">Lay</div>
+                        </div>
+
+                        <div class="row align-items-center mb-2" style="margin: -4px;">
+                            <div class="col-8">Gujarat Giants W</div>
+                            <div class="col-2 back">--</div>
+                            <div class="col-2 lay">--</div>
+                        </div>
+
+                        <div class="row align-items-center" style="margin: -4px;">
+                            <div class="col-8">Delhi Capitals W</div>
+                            <div class="col-2 back">--</div>
+                            <div class="col-2 lay">--</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                }
+
+
+
+
+                @if(activeTab === 'time'){
+                <div class="container" style="margin-top:5px">
+                    <div class="item-list-parent">
+                        <div class="item-list">
+                            <i class="bi bi-star star"></i>
+                            <div class="item-text">
+                                <h3> Australia U19 v West Indies U19</h3>
+                            </div>
+                            <div style="position: absolute;right: 0; display:flex; gap: 15px">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="item-list">
+                            <i class="bi bi-star star"></i>
+                            <div class="item-text">
+                                <h3> Australia U19 v West Indies U19</h3>
+                            </div>
+                            <div style="position: absolute;right: 0; display:flex; gap: 15px">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="item-list">
+                            <i class="bi bi-star star"></i>
+                            <div class="item-text">
+                                <h3> Australia U19 v West Indies U19</h3>
+                            </div>
+                            <div style="position: absolute;right: 0; display:flex; gap: 15px">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                        <div class="item-list">
+                            <i class="bi bi-star star"></i>
+                            <div class="item-text">
+                                <h3> Australia U19 v West Indies U19</h3>
+                            </div>
+                            <div style="position: absolute;right: 0; display:flex; gap: 15px">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+
+
+
+
+
+                @if(activeTab === 'upcoming'){
+
+                <div class="popular-section">
+                    <h6 class="popular-title">Popular</h6>
+
+                    <div class="popular-list">
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>Virtual International 2026</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>Virtual PSL 2026</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>ICC Womens World T20 Qualifier Matches</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>ICC U19 World Cup</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>Virtual IPL 2026</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>World Legends Pro League T20</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>Virtual CPL 2026</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>Super Smash SRL</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>International Twenty20 Matches</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                        <div class="popular-item">
+                            <div class="left">
+                                <i class="bi bi-bookmark"></i>
+                                <span>Virtual Big Bash 2026</span>
+                            </div>
+                            <i class="bi bi-chevron-right arrow"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                }
+
+
+
+
+
+
+
+
+
+                @if(activeTab === 'league'){
+                <div class="container-fluid p-2 league-wrapper">
+
+                    <!-- Virtual International 2026 -->
+                    <div class="league-box">
+                        <div class="league-header">
+                            <span>Virtual International 2026</span>
+                            <div class="header-right">
+                                <span class="count">2</span>
+                                <i class="bi bi-chevron-up"></i>
+                            </div>
+                        </div>
+
+                        <div class="match-item">
+                            <i class="bi bi-star star"></i>
+                            <div class="match-content">
+                                <div class="match-title">
+                                    West Indies SRL T20 v South Africa SRL T20
+                                </div>
+                                <div class="match-meta">
+                                    <span class="time">Today 11:30</span>
+                                    <span class="vr">VR</span>
+                                    <span class="matched">Matched 0.00</span>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="match-item">
+                            <i class="bi bi-star star"></i>
+                            <div class="match-content">
+                                <div class="match-title">
+                                    England SRL T20 v Australia SRL T20
+                                </div>
+                                <div class="match-meta">
+                                    <span class="time">Today 14:30</span>
+                                    <span class="vr">VR</span>
+                                    <span class="matched">Matched 0.00</span>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Virtual PSL 2026 -->
+                    <div class="league-box mt-3">
+                        <div class="league-header">
+                            <span>Virtual PSL 2026</span>
+                            <div class="header-right">
+                                <span class="count">3</span>
+                                <i class="bi bi-chevron-up"></i>
+                            </div>
+                        </div>
+
+                        <div class="match-item">
+                            <i class="bi bi-star star"></i>
+                            <div class="match-content">
+                                <div class="match-title">
+                                    Multan Sultans SRL T20 v Islamabad United SRL T20
+                                </div>
+                                <div class="match-meta">
+                                    <span class="time">Today 12:30</span>
+                                    <span class="vr">VR</span>
+                                    <span class="matched">Matched 0.00</span>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="match-item">
+                            <i class="bi bi-star star"></i>
+                            <div class="match-content">
+                                <div class="match-title">
+                                    Quetta Gladiators SRL T20 v Lahore Qalanders SRL T20
+                                </div>
+                                <div class="match-meta">
+                                    <span class="time">Today 15:30</span>
+                                    <span class="vr">VR</span>
+                                    <span class="matched">Matched 0.00</span>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                        <div class="match-item">
+                            <i class="bi bi-star star"></i>
+                            <div class="match-content">
+                                <div class="match-title">
+                                    Karachi Kings SRL T20 v Peshawar Zalmi SRL T20
+                                </div>
+                                <div class="match-meta">
+                                    <span class="time">Today 19:30</span>
+                                    <span class="vr">VR</span>
+                                    <span class="matched">Matched 0.00</span>
+                                </div>
+                            </div>
+                            <div class="match-right">
+                                <i class="bi bi-broadcast"></i>
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                }
+
+
             </div>
+
         </div>
-        <!-- Sports Icon Bar -->
-        <div class="sports-bar">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col sport-item">
-                        <img src="assets/images/chip.webp" alt="">
-                        Casino
-                    </div>
-                    <div class="col sport-item">
-                        My Fav 
-                         <span class="badge bg-warning text-dark">0</span>
-                    </div>
-                    <div class="col sport-item active">
-                        Cricket <span class="badge bg-danger">5</span>
-                    </div>
-                    <div class="col sport-item">
-                        Soccer <span class="badge bg-warning text-dark">8</span>
-                    </div>
-                    <div class="col sport-item">
-                        Tennis <span class="badge bg-warning text-dark">12</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Filter Bar -->
-        <div class="filter-bar mt-2">
-            <button class="btn btn-light btn-sm">
-                ⇅ by Competition
-            </button>
-
-            <button class="btn btn-light btn-sm">
-                Collapse ⌄
-            </button>
-        </div>
-        <!-- League + Match (One Day Internationals) -->
-        <div class="container">
-            <div class="league-header">
-                One Day Internationals
-                <span class="badge bg-primary">1</span>
-            </div>
-
-            <div class="match-card">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        ⭐ <strong>Sri Lanka v England</strong><br>
-                        <span class="inplay">In-play</span>
-                        <small class="text-muted">Matched 0.00</small>
-                    </div>
-                    <div>
-                        <i class="bi bi-chevron-right"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Women’s Premier League (Back / Lay) -->
-        <div class="container mt-3">
-            <div class="league-header">
-                Women_s Premier League
-                <span class="badge bg-primary">1</span>
-            </div>
-
-            <div class="match-card">
-                <div class="d-flex justify-content-between mb-2">
-                    <div>
-                        ⭐ <strong>Gujarat Giants W v Delhi Capitals W</strong><br>
-                        <span class="inplay">In-play</span>
-                    </div>
-                </div>
-
-                <div class="row text-center fw-bold mb-1">
-                    <div class="col-8"></div>
-                    <div class="col-2">Back</div>
-                    <div class="col-2">Lay</div>
-                </div>
-
-                <div class="row align-items-center mb-2" style="margin: -4px;">
-                    <div class="col-8">Gujarat Giants W</div>
-                    <div class="col-2 back">--</div>
-                    <div class="col-2 lay">--</div>
-                </div>
-
-                <div class="row align-items-center" style="margin: -4px;">
-                    <div class="col-8">Delhi Capitals W</div>
-                    <div class="col-2 back">--</div>
-                    <div class="col-2 lay">--</div>
-                </div>
-            </div>
-        </div>
-       </div>
-
     </div>
+
+
 </div>

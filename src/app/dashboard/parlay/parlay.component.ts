@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
-import { SidebarService } from '../../sidebar.service';
 import { LeftSidebarComponent } from '../../left-sidebar/left-sidebar.component';
+import { SidebarService } from '../../sidebar.service';
 import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home-2',
-  imports: [LeftSidebarComponent , RouterLink , CommonModule],
-  templateUrl: './home-2.component.html',
-  styleUrl: './home-2.component.css'
+  selector: 'app-parlay',
+  imports: [LeftSidebarComponent , RouterLink],
+  templateUrl: './parlay.component.html',
+  styleUrl: './parlay.component.css'
 })
-export class Home2Component {
+export class ParlayComponent {
 isSidebarOpen = false;
 
   constructor(private sidebarService: SidebarService) {
@@ -23,10 +22,4 @@ isSidebarOpen = false;
   changeTab(tab:any){
     this.activeTab = tab;
   }
-
-  // competitionTab: string = 'time';
-
-  // tbChange(tab:any){
-  //  this.competitionTab = tab; 
-  // }
 }

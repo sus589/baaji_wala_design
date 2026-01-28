@@ -1,0 +1,116 @@
+.login-header {
+    display: flex;
+    background: #161616;
+    position: fixed;
+    z-index: 9;
+    padding: 12px;
+    transform: translate(-12px, -53px);
+    width: 100%;
+}
+
+.login-header h3 {
+    margin: auto;
+    color: #fff;
+}
+
+.img-container {
+    width: 100%;
+    margin-top: 53px;
+}
+
+.img-container img {
+   width: 454px;
+    margin: auto;
+    display: flex;
+}
+
+.form-div {
+    background-color: #3b392f;
+    width: 454px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.form-container label {
+    color: #fff;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input {
+    padding: 10px;
+    background-color: #3e3c34;
+    border-radius: 1px solid #3b392f;
+    ;
+}
+
+.login-btn {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(180deg, #ffc20f 0%, #f4b600 100%);
+    border-radius: 5px;
+}
+
+.login-btn h3 {
+    color: #000;
+}
+
+.form-container img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(370px, 27px);
+    filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(468%) hue-rotate(169deg) brightness(92%) contrast(88%);
+
+}
+
+.form-container span {
+    position: absolute;
+    transform: translate(370px, 31px);
+    color: #7e919e;
+    font-size: 21px;
+}
+.sidebar-open{
+    width: calc(100% - 240px);
+    margin-left: 240px;
+}
+.all-back{
+    background-color: #000;
+}
+.any-question{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+}
+.any-question a{
+    margin-left: 5px;
+    color: #f4b600;
+}
+@media(min-width:768px){
+
+   .login-header{
+    display: none;
+   }
+   .img-container{
+    width: unset;
+    margin-top:0;
+   }
+   .all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+    .all-back{
+    margin-top: 50px;
+    background-image: url('/assets/images/imgi_27_bg-cricket.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+}
