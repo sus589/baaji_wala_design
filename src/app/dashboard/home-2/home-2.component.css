@@ -2,6 +2,10 @@
    background: #0b2341;
    color: #fff;
    font-family: Arial, sans-serif;
+   /* height: 100vh; */
+   /* overflow-x: hidden;
+   overflow-y:scroll;
+   scrollbar-width: thin; */
  }
 
  /* ===== TOP TABS ===== */
@@ -130,7 +134,7 @@
 
  .league-wrapper {
    background: #0f2b4d;
-   min-height: 100vh;
+   /* min-height: 100vh; */
  }
 
  .league-box {
@@ -231,7 +235,7 @@
  .popular-section {
    background: #0f2b4d;
    padding: 12px;
-   height: 100vh;
+   /* height: 100vh; */
  }
 
  .popular-title {

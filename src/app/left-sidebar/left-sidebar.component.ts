@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { SidebarService } from '../sidebar.service';
 import { CommonModule, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-left-sidebar',
-  imports: [CommonModule , NgIf],
+  imports: [CommonModule , NgIf , RouterLink],
   templateUrl: './left-sidebar.component.html',
   styleUrl: './left-sidebar.component.css'
 })
@@ -17,10 +18,10 @@ isSidebarOpen = false;
   }
  
 
-  activeTab: boolean = false;
-  changeTab(){
-    this.activeTab = !this.activeTab;
-  }
+  // activeTab: boolean = false;
+  // changeTab(){
+  //   this.activeTab = !this.activeTab;
+  // }
 
 
   openMenu: string | null = null;

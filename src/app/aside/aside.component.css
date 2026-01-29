@@ -79,9 +79,10 @@
 .menu-box img{
         transform: translate(-9px, -11px);
         filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
+        width: 30px;
 }
 .menu-box p{
-        transform: translate(-15px, -11px);
+        transform: translate(-11px, -11px);
          color:#0e2749;
          font-weight: 500;
          font-size: 14px;

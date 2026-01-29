@@ -15,7 +15,7 @@
                         <h3>Hi Welcome</h3>
                     </div>
                     <div class="list-two">
-                        <div class="login">
+                        <div class="login" routerLink="/login">
                             <img src="assets/images/icon-login-s.svg" alt="">
                             <p>LOGIN</p>
                         </div>
@@ -26,41 +26,41 @@
                     </div>
                 </div>
                 <div class="menu-list-two">
-                    <div class="menu-box" (click)="changeTab('casino')" [class.active]="activeTab === 'casino'">
+                    <div class="menu-box" routerLink="/dashboard/sports">
                         <img src="assets/images/icon-cricket.svg" alt="">
                         <p>Cricket</p>
+                    </div>
+                    <div class="menu-box" routerLink="/dashboard/sports">
+                        <img src="assets/images/icon-sport.svg" alt="">
+                        <p>Soccer</p>
+                    </div>
+                    <div class="menu-box" (click)="changeTab('casino')" [class.active]="activeTab === 'casino'">
+                        <img src="assets/images/icon-casino.svg" alt="">
+                        <p>Casino</p>
                     </div>
                     <div class="menu-box" (click)="changeTab('table')" [class.active]="activeTab === 'table'">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
+                        <img src="assets/images/icon-table.svg" alt="">
+                        <p>Table</p>
+                    </div>
+                    <div class="menu-box" (click)="changeTab('slot')" [class.active]="activeTab === 'slot'">
+                        <img src="assets/images/icon-slot.svg" alt="">
+                        <p>Slot</p>
+                    </div>
+                    <div class="menu-box" (click)="changeTab('fish')" [class.active]="activeTab === 'fish'">
+                        <img src="assets/images/icon-fish.svg" alt="">
+                        <p>Fishing</p>
+                    </div>
+                    <div class="menu-box" (click)="changeTab('egame')" [class.active]="activeTab === 'egame'">
+                        <img src="assets/images/icon-arcade.svg" alt="">
+                        <p>Egame</p>
                     </div>
                     <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
+                        <img src="assets/images/facebook.svg" alt="">
+                        <p>Fcebook</p>
                     </div>
                     <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
-                    </div>
-                    <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
-                    </div>
-                    <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
-                    </div>
-                    <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
-                    </div>
-                    <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
-                    </div>
-                    <div class="menu-box">
-                        <img src="assets/images/icon-cricket.svg" alt="">
-                        <p>Cricket</p>
+                        <img src="assets/images/icon-customer.svg" alt="">
+                        <p>Chat</p>
                     </div>
                 </div>
                 <div class="menu-list-three">
@@ -76,17 +76,21 @@
                         <img src="assets/images/icon-all-provider.svg" alt="">
                         <p>All Provider</p>
                     </li>
-                    <li>
-                        <img src="assets/images/icon-all-provider.svg" alt="">
-                        <p>PP</p>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/FC.webp" alt="">
+                        <p>FC</p>
                     </li>
-                    <li>
+                    <li routerLink="/dashboard/games/LIVE">
                         <img src="assets/images/PT.webp" alt="">
                         <p>PT</p>
                     </li>
-                    <li>
-                        <img src="assets/images/icon-all-provider.svg" alt="">
-                        <p>HJ</p>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/JDB.webp" alt="">
+                        <p>JDB</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/SG.webp" alt="">
+                        <p>SG</p>
                     </li>
 
                 </ul>
@@ -97,21 +101,91 @@
 
             <div class="menu-bar-side" *ngIf="activeTab === 'table'">
                 <ul>
-                    <li>
+                    <li routerLink="/dashboard/games/LIVE">
                         <img src="assets/images/EVOPLAY.webp" alt="">
                         <p>EVOPLAY</p>
                     </li>
-                    <li>
+                    <li routerLink="/dashboard/games/LIVE">
                         <img src="assets/images/PT.webp" alt="">
                         <p>PT</p>
                     </li>
-                    <li>
+                    <li routerLink="/dashboard/games/LIVE">
                         <img src="assets/images/SPRIBE.webp" alt="">
                         <p>SPRIBE</p>
                     </li>
-                    <li>
+                    <li routerLink="/dashboard/games/LIVE">
                         <img src="assets/images/icon-all-provider.svg" alt="">
                         <p>HJ</p>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="menu-bar-side" *ngIf="activeTab === 'slot'">
+                <ul>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/EVOPLAY.webp" alt="">
+                        <p>EVOPLAY</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/icon-all-provider.svg" alt="">
+                        <p>HJ</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/PT.webp" alt="">
+                        <p>PT</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/SPRIBE.webp" alt="">
+                        <p>SPRIBE</p>
+                    </li>
+                </ul>
+
+            </div>
+
+
+
+            <div class="menu-bar-side" *ngIf="activeTab === 'fish'">
+                <ul>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/icon-all-provider.svg" alt="">
+                        <p>HJ</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/PT.webp" alt="">
+                        <p>PT</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/EVOPLAY.webp" alt="">
+                        <p>EVOPLAY</p>
+                    </li>
+
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/SPRIBE.webp" alt="">
+                        <p>SPRIBE</p>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="menu-bar-side" *ngIf="activeTab === 'egame'">
+                <ul>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/SPRIBE.webp" alt="">
+                        <p>SPRIBE</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/icon-all-provider.svg" alt="">
+                        <p>HJ</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/PT.webp" alt="">
+                        <p>PT</p>
+                    </li>
+                    <li routerLink="/dashboard/games/LIVE">
+                        <img src="assets/images/EVOPLAY.webp" alt="">
+                        <p>EVOPLAY</p>
                     </li>
                 </ul>
 

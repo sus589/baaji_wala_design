@@ -1,6 +1,6 @@
 <app-left-sidebar></app-left-sidebar>
 
-<div class="container-fluid all-back" [class.sidebar-open]="isSidebarOpen" >
+<div class="container-fluid all-back" [class.sidebar-open]="isSidebarOpen">
    <div class="all">
       <div class="login-header">
          <img src="assets/images/icon-arrow-type01.svg" alt="">
@@ -21,18 +21,16 @@
 
          <div class="form-container">
             <label for="">Password</label>
-            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
             <img src="assets/images/icon-eye-close-type.svg" alt="">
          </div>
 
 
          <div class="form-container">
             <label for="">Validation</label>
-            <input type="text" placeholder="Username">
+            <input type="number" placeholder="validation" maxlength="4">
             <span class="validation-code">5667</span>
          </div>
-
-
 
          <button class="login-btn">
             <h3>Login</h3>

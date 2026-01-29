@@ -4,144 +4,252 @@
       <div class="nav-item-head active">
         <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
         <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+        <!-- <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""> -->
       </div>
 
-      <div class="nav-items-collapse" (click)="toggleMenu('casino')">
-        <div class="nav-item-head">
-          <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-          <p class="nav-item-text">Home</p>
-          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="openMenu === 'casino'">
-        </div>
-
-        <div class="nav-item-head-collape" *ngIf="openMenu === 'casino'">
-          <ul>
-            <li>
-              <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
-              </div>
-            </li>
-
-            <li>
-              <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div class="nav-items-collapse" (click)="toggleMenu('hot-game')">
         <div class="nav-item-head">
-          <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-          <p class="nav-item-text">Home</p>
-          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="openMenu === 'hot-game'">
+          <img class="nav-item-icon" src="assets/images/icon-hotgame.svg" alt="">
+          <p class="nav-item-text">Hot Game</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'hot-game'">
         </div>
 
         <div class="nav-item-head-collape" *ngIf="openMenu === 'hot-game'">
           <ul>
-            <li>
+            <li routerLink="/login">
               <div class="list-items">
                 <img src="assets/images/provider-jilisuperace.png" alt="">
                 <p>Super Ace</p>
               </div>
             </li>
 
-            <li>
+            <li routerLink="/login">
               <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
+                <img src="assets/images/provider-jilifortunegems500.png" alt="">
+                <p>Boxing King</p>
               </div>
             </li>
 
-            <li>
+            <li routerLink="/login">
               <div class="list-items">
                 <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
+                <p>Fortune Gems 500</p>
               </div>
             </li>
           </ul>
         </div>
       </div>
 
-
-      <div class="nav-items-collapse" (click)="changeTab()">
-        <div class="nav-item-head" (click)="toggleMenu('table')">
-          <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-          <p class="nav-item-text">Home</p>
-          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="openMenu === 'table'">
+      <div class="nav-items-collapse" (click)="toggleMenu('sports')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-sport.svg" alt="">
+          <p class="nav-item-text">Sports</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'sports'">
         </div>
 
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'sports'">
+          <ul>
+            <li routerLink="/dashboard/sports">
+              <div class="list-items">
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
+              </div>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="nav-items-collapse" (click)="toggleMenu('casino')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-casino.svg" alt="">
+          <p class="nav-item-text">Live Casino</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'casino'">
+        </div>
+
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'casino'">
+          <ul>
+            <li routerLink="/dashboard/games/LIVE">
+              <div class="list-items">
+                <img src="assets/images/provider-awcmpp.png" alt="">
+                <p>PL</p>
+              </div>
+            </li>
+
+
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="nav-items-collapse" (click)="toggleMenu('slot')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-slot.svg" alt="">
+          <div>
+            <p class="nav-item-text">Slot</p>
+          </div>
+
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'slot'">
+        </div>
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'slot'">
+          <ul>
+            <li routerLink="/dashboard/games/LIVE">
+              <div class="list-items">
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
+              </div>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="nav-items-collapse" (click)="toggleMenu('crash')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-crash.svg" alt="">
+          <p class="nav-item-text">Crash</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'crash'">
+        </div>
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'crash'">
+          <ul>
+            <li routerLink="/dashboard/games/LIVE">
+              <div class="list-items">
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
+              </div>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="nav-items-collapse" (click)="toggleMenu('table')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-table.svg" alt="">
+          <p class="nav-item-text">Table</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'table'">
+        </div>
 
         <div class="nav-item-head-collape" *ngIf="openMenu === 'table'">
           <ul>
-            <li>
+            <li routerLink="/dashboard/games/LIVE">
               <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
               </div>
             </li>
 
-            <li>
-              <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
-              </div>
-            </li>
 
-            <li>
-              <div class="list-items">
-                <img src="assets/images/provider-jilisuperace.png" alt="">
-                <p>Super Ace</p>
-              </div>
-            </li>
+
+
           </ul>
         </div>
       </div>
 
-      <div class="nav-item-head">
-        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-        <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="" >
+
+      <div class="nav-items-collapse" (click)="toggleMenu('fish')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-fish.svg" alt="">
+          <p class="nav-item-text">Fish</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'fish'">
+        </div>
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'fish'">
+          <ul>
+            <li routerLink="/dashboard/games/LIVE">
+              <div class="list-items">
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
+              </div>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+
       </div>
 
-      <div class="nav-item-head">
-        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-        <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+
+      <div class="nav-items-collapse" (click)="toggleMenu('arcade')">
+        <div class="nav-item-head">
+          <img class="nav-item-icon" src="assets/images/icon-arcade.svg" alt="">
+          <p class="nav-item-text">Arcade</p>
+          <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+            [class.rotate]="openMenu === 'arcade'">
+        </div>
+
+        <div class="nav-item-head-collape" *ngIf="openMenu === 'arcade'">
+          <ul>
+            <li routerLink="/dashboard/games/LIVE">
+              <div class="list-items">
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
+              </div>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+
       </div>
 
+      <div class="nav-items-collapse" (click)="toggleMenu('Lottery')">
       <div class="nav-item-head">
-        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-        <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+        <img class="nav-item-icon" src="assets/images/icon-lottery.svg" alt="">
+        <p class="nav-item-text">Lottery</p>
+        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt=""
+          [class.rotate]="openMenu === 'Lottery'">
       </div>
 
-      <div class="nav-item-head">
-        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-        <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
+
+
+      <div class="nav-item-head-collape" *ngIf="openMenu === 'Lottery'">
+          <ul>
+            <li routerLink="/dashboard/games/LIVE">
+              <div class="list-items">
+                <img src="assets/images/provider-awcv2_evolution.png" alt="">
+                <p>Exchanges</p>
+              </div>
+            </li>
+
+
+
+
+          </ul>
+        </div>
+
       </div>
 
-      <div class="nav-item-head">
-        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-        <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-      </div>
 
-      <div class="nav-item-head">
-        <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
-        <p class="nav-item-text">Home</p>
-        <img class="nav-item-arrow" src="assets/images/accordion-arrow.svg" alt="">
-      </div>
+
+
     </div>
   </div>
 </div>

@@ -63,7 +63,7 @@
 
                 @if(activeTab === 'live'){
                 <!-- League + Match (One Day Internationals) -->
-                <div class="container">
+                <div class="container" routerLink="/dashboard/match">
                     <div class="league-header">
                         One Day Internationals
                         <span class="badge bg-primary">1</span>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <!-- Women’s Premier League (Back / Lay) -->
-                <div class="container mt-3">
+                <div class="container mt-3" routerLink="/dashboard/match">
                     <div class="league-header">
                         Women_s Premier League
                         <span class="badge bg-primary">1</span>
@@ -130,7 +130,7 @@
 
 
                 @if(activeTab === 'time'){
-                <div class="container" style="margin-top:5px">
+                <div class="container" style="margin-top:5px" routerLink="/dashboard/match">
                     <div class="item-list-parent">
                         <div class="item-list">
                             <i class="bi bi-star star"></i>
@@ -182,7 +182,7 @@
 
                 @if(activeTab === 'upcoming'){
 
-                <div class="popular-section">
+                <div class="popular-section" routerLink="/dashboard/match">
                     <h6 class="popular-title">Popular</h6>
 
                     <div class="popular-list">
@@ -235,7 +235,7 @@
                             <i class="bi bi-chevron-right arrow"></i>
                         </div>
 
-                        <div class="popular-item">
+                        <!-- <div class="popular-item">
                             <div class="left">
                                 <i class="bi bi-bookmark"></i>
                                 <span>Virtual CPL 2026</span>
@@ -265,7 +265,7 @@
                                 <span>Virtual Big Bash 2026</span>
                             </div>
                             <i class="bi bi-chevron-right arrow"></i>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -282,7 +282,7 @@
 
 
                 @if(activeTab === 'league'){
-                <div class="container-fluid p-2 league-wrapper">
+                <div class="container-fluid p-2 league-wrapper" routerLink="/dashboard/match">
 
                     <!-- Virtual International 2026 -->
                     <div class="league-box">

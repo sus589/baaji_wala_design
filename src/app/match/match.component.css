@@ -1,0 +1,106 @@
+.bg-light{
+  background-color: #6196cf !important;
+}
+/* ===== HEADER ===== */
+.exchange-header {
+  background:#0b55a5;
+  color:#fff;
+  padding:10px 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:14px;
+}
+.exchange-header .matched {
+  color:#ffc107;
+  font-weight:600;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  background:#4f6fb6;
+  color:#fff;
+  padding:8px 12px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* ===== ODDS TABLE ===== */
+.odds-table {
+  background:#fff;
+}
+.odds-row {
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid #e5e5e5;
+}
+.team-name {
+  flex:1;
+  padding:10px;
+  font-weight:600;
+  background:#f1f8fc;
+}
+.odds-box {
+  width:80px;
+  text-align:center;
+  padding:6px;
+  font-weight:700;
+}
+.back {
+  background:#8fd1f6;
+}
+.lay {
+  background:#f5a6b3;
+}
+.odds-box small {
+  display:block;
+  font-weight:400;
+  font-size:12px;
+}
+
+/* ===== MARKET DEPTH BUTTON ===== */
+.market-depth {
+  margin:10px;
+}
+.market-depth button {
+  background:#0b55a5;
+  color:#fff;
+  border:none;
+  padding:6px 12px;
+  border-radius:4px;
+  font-size:14px;
+}
+
+/* ===== BOOK SECTION ===== */
+.book-header {
+  background:#4f6fb6;
+  color:#fff;
+  padding:8px 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:600;
+}
+.ball-running {
+  background:#3c4c59;
+  color:#fff;
+  padding:8px;
+  border-radius:6px;
+  width:140px;
+  text-align:center;
+  font-size:14px;
+}
+.sidebar-open{
+    width: calc(100% - 240px);
+    margin-left: 240px;
+}
+
+@media(min-width: 768px){
+  .bg-light{
+  background-image: url('/assets/images/imgi_27_bg-cricket.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+}

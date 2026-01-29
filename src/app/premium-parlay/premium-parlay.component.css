@@ -1,0 +1,101 @@
+.wrap{
+  background: #1c191a;
+}
+
+.sportsbook-wrapper{
+  width:400px;
+  margin:20px auto;
+  background:#0b4fa3;
+  border-radius:12px;
+  padding-bottom:10px;
+  margin-top:50px;
+}
+
+/* Header */
+.sportsbook-header{
+  background:#4e6fb8;
+  color:#000;
+  padding:10px 14px;
+  font-weight:600;
+  border-radius:12px 12px 0 0;
+  background:#e9f0f6;
+  width:fit-content;
+}
+
+/* Tabs */
+.sportsbook-tabs{
+  background:#e9f0f6;
+  padding:6px 8px;
+  font-size:14px;
+}
+
+.sportsbook-tabs .nav-link{
+  color:#000;
+  padding:4px 10px;
+}
+
+.sportsbook-tabs .nav-link.active{
+  font-weight:600;
+  border-bottom:2px solid #000;
+}
+
+.info-icon{
+  background:#999;
+  color:#fff;
+  border-radius:50%;
+  width:18px;
+  height:18px;
+  text-align:center;
+  font-size:12px;
+  line-height:18px;
+}
+
+/* Market Card */
+.market-card{
+  margin:10px;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+/* Market Header */
+.market-header{
+  background:#005cb9;
+  color:#fff;
+  padding:8px 10px;
+  font-size:14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* Market Body */
+.market-body{
+  background:#005cb9;
+  padding:6px;
+}
+
+/* Odds Box */
+.market-box{
+  background:#a9d8f5;
+  border-radius:6px;
+  padding:12px 6px;
+  text-align:center;
+}
+
+.market-box .option{
+  font-size:14px;
+  text-transform:lowercase;
+}
+
+.market-box .odd{
+  font-weight:700;
+  font-size:15px;
+}
+
+@media(min-width:768px){
+  .wrap{
+    background-image: url('/assets/images/imgi_27_bg-cricket.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+}

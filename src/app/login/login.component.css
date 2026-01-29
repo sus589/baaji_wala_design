@@ -19,14 +19,14 @@
 }
 
 .img-container img {
-   width: 454px;
+   width: 100%;
     margin: auto;
     display: flex;
 }
 
 .form-div {
     background-color: #3b392f;
-    width: 454px;
+    width: 100%;
     padding: 15px;
     margin: auto;
     margin-top: 10px;
@@ -39,13 +39,14 @@
 .form-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .form-container input {
     padding: 10px;
     background-color: #3e3c34;
-    border-radius: 1px solid #3b392f;
-    ;
+    border: 1px solid #3b392f;
+    
 }
 
 .login-btn {
@@ -64,14 +65,15 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    transform: translate(370px, 27px);
     filter: brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(468%) hue-rotate(169deg) brightness(92%) contrast(88%);
-
+    right: 0;
+    top: 27px;
 }
 
 .form-container span {
     position: absolute;
-    transform: translate(370px, 31px);
+    right: 0;
+    top: 30px;
     color: #7e919e;
     font-size: 21px;
 }
@@ -97,7 +99,8 @@
     display: none;
    }
    .img-container{
-    width: unset;
+    max-width: 480px;
+    margin: auto;
     margin-top:0;
    }
    .all{
@@ -112,5 +115,8 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+   }
+   .form-div {
+      max-width: 480px;
    }
 }

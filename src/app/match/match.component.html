@@ -1,1 +1,68 @@
-<p>match works!</p>
+<app-left-sidebar></app-left-sidebar>
+<div class="bg-light" [class.sidebar-open]="isSidebarOpen" style="margin-top: 50px">
+
+<div class="container-fluid p-0" style="max-width:420px">
+
+  <!-- Exchange Header -->
+  <div class="exchange-header">
+    <span>Exchange</span>
+    <span class="matched">Matched &nbsp; PBU 3909752.29</span>
+  </div>
+
+  <!-- Match Odds -->
+  <div class="section-title">
+     <i class="bi bi-star star"></i> Match Odds
+  </div>
+
+  <div class="odds-table">
+    <div class="odds-row">
+      <div class="team-name">Australia U19</div>
+      <div class="odds-box back">
+        1.83
+        <small>91.92</small>
+      </div>
+      <div class="odds-box lay">
+        1.84
+        <small>160.21</small>
+      </div>
+    </div>
+
+    <div class="odds-row">
+      <div class="team-name">West Indies U19</div>
+      <div class="odds-box back">
+        2.18
+        <small>135.22</small>
+      </div>
+      <div class="odds-box lay">
+        2.22
+        <small>485.68</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Market Depth -->
+  <div class="market-depth">
+    <button> Market Depth</button>
+  </div>
+
+  <!-- Book Section -->
+  <div class="book-header">
+    <span> <i class="bi bi-star star"></i> Book</span>
+    <span><i class="bi bi-chevron-up"></i></span>
+  </div>
+
+  <div class="odds-table">
+    <div class="odds-row">
+      <div class="team-name">Australia U19</div>
+      <div class="ball-running">0 Ball Running</div>
+    </div>
+
+    <div class="odds-row">
+      <div class="team-name">West Indies U19</div>
+      <div class="ball-running">0 Ball Running</div>
+    </div>
+  </div>
+
+</div>
+
+</div>

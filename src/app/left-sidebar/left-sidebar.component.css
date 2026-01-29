@@ -12,8 +12,9 @@
 .nav-item-head {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    padding: 8px;
+    justify-content: flex-start;
+    padding: 4px 34px 4px 46px;
+    position: relative;
 }
 .nav-item-head.active{
     background: linear-gradient(270deg, rgba(255, 184, 12, .3) 0%, rgba(255, 184, 12, .4) 100%);;
@@ -21,16 +22,17 @@
 .nav-item-icon {
     filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
     width: 20px;
-    height: 24px;
+    height: 35px;
+    position: absolute;
+    left:10px;
 }
 
 .nav-item-text {
     font-weight: 600;
     font-size: 14px;
     color: #052753;
-    margin: auto 0;
-    margin-left: 20px;
-    margin-right: 60px;
+    margin: 8px 0;
+  
 
 }
 
@@ -38,6 +40,8 @@
     width: 18px;
     height: 26px;
     filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
+    position: absolute;
+    right: 10px;
 }
 .nav-item-arrow.rotate{
     transform: rotate(-180deg);
