@@ -2,7 +2,8 @@
    background: #0b2341;
    color: #fff;
    font-family: Arial, sans-serif;
-   /* height: 100vh; */
+   height: auto;
+   /* min-height: 100vh; */
    /* overflow-x: hidden;
    overflow-y:scroll;
    scrollbar-width: thin; */
@@ -53,12 +54,14 @@
  .sport-item img {
    width: 30px;
  }
- .sport-item p{
-  margin-bottom: 0;
+
+ .sport-item p {
+   margin-bottom: 0;
  }
+
  .sport-item::before {
    /* content: "\e92a"; */
-   
+
  }
 
  /* ===== FILTER BAR ===== */
@@ -90,22 +93,24 @@
    /* margin-top:6px; */
    padding: 4px;
  }
-.inplay {
+
+ .inplay {
    background: #1fb15a;
    color: #fff;
    padding: 2px 6px;
    border-radius: 4px;
    font-size: 12px;
-}
+ }
+
  .inplay-btn {
-    background: #1fb15a;
-    color: #fff;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 12px;
-    display: flex;
-    width: 51px;
-    justify-content: flex-start;
+   background: #1fb15a;
+   color: #fff;
+   padding: 2px 6px;
+   border-radius: 4px;
+   font-size: 12px;
+   display: flex;
+   width: 51px;
+   justify-content: flex-start;
  }
 
  /* ===== BACK LAY ===== */
@@ -125,10 +130,7 @@
    font-weight: 600;
  }
 
- .sidebar-open {
-   width: calc(100% - 250px);
-   margin-left: 240px;
- }
+
 
  /* upcoming  */
 
@@ -284,34 +286,39 @@
 
  /* league  */
 
-/* time  */
- .filter-bar select{
+ /* time  */
+ .filter-bar select {
    border: none;
    padding: 8px;
-    border-radius: 6px;
- }
- .item-list{
-  display: flex;
-  
-  color: #000;
-  padding: 10px;
- 
-  position: relative;
+   border-radius: 6px;
  }
 
- .item-text h3{
-  font-size: 18px;
-  font-weight: 600;
+ .item-list {
+   display: flex;
+
+   color: #000;
+   padding: 10px;
+
+   position: relative;
  }
- .item-list-parent{
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
+
+ .item-text h3 {
+   font-size: 18px;
+   font-weight: 600;
+ }
+
+ .item-list-parent {
+   display: flex;
+   flex-direction: column;
+   background-color: #fff;
    border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  padding: 6x;
+   border-top-right-radius: 6px;
+   padding: 6x;
  }
-/* time  */
+
+ /* time  */
+
+
 
  @media(min-width:768px) {
    .wrap {
@@ -322,12 +329,40 @@
    .top-tabs {
      width: 62%;
    }
-   .all-back{
-    background-image: url('/assets/images/imgi_27_bg-cricket.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+   .all-back {
+     background-image: url('/assets/images/imgi_27_bg-cricket.png');
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
    }
+
+   .content-scroll {
+     height: calc(100vh - 80px);
+     overflow-y: scroll;
+     overflow-x: hidden;
+   }
+
+   /* Chrome, Edge, Safari */
+   .content-scroll::-webkit-scrollbar {
+     width: 0px;
+     height: 0px;
+   }
+
+   /* Firefox */
+   .content-scroll {
+     scrollbar-width: none;
+   }
+
+   /* IE / Old Edge */
+   .content-scroll {
+     -ms-overflow-style: none;
+   }
+    .sidebar-open {
+   width: calc(100% - 250px);
+   margin-left: 240px;
+ }
+
  }
 
  @media (min-width: 992px) {

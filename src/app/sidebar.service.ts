@@ -8,7 +8,7 @@ export class SidebarService {
 
   constructor() { }
 
-  private sidebarState = new BehaviorSubject<boolean>(false);
+  private sidebarState = new BehaviorSubject<boolean>(true);
   sidebarOpen$ = this.sidebarState.asObservable();
 
   toggleSidebar() {

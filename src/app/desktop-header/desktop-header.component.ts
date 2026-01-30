@@ -11,7 +11,7 @@ import { AsideComponent } from '../aside/aside.component';
 })
 export class DesktopHeaderComponent {
 
-  isSidebarOpen = false;
+  isSidebarOpen = true;
 
   constructor(private route: Router, private sidebarService: SidebarService
   ) {

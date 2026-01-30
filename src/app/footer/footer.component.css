@@ -108,10 +108,6 @@
   /* transition: all 0.3s ease; */
 }
 
-.sidebar-open {
-  width: calc(100% - 240px);
-  margin-left: 240px;
-}
 
 /* tips 1 end  */
 
@@ -130,4 +126,9 @@
        text-overflow: ellipsis;
        white-space: nowrap;
      }
+     .sidebar-open {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
    }

@@ -103,9 +103,9 @@
     transition: transform 0.3s ease;
 }
 
-.sidebar-open .desktop-btn {
+/* .sidebar-open .desktop-btn {
     transform: translateX(200px);
-}
+} */
 
 
 /* tips 1 end */
@@ -166,7 +166,8 @@
     .sports-btn p {
         font-weight: 600;
         font-size: 14px;
-        transform: translate(100px, -52px);
+        margin-top: -52px;
+        margin-left: 98px;
     }
 
     .desktop-logo {

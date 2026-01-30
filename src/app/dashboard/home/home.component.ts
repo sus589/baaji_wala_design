@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  isSidebarOpen = false;
+  isSidebarOpen = true;
 
   constructor(private sidebarService: SidebarService) {
     this.sidebarService.sidebarOpen$

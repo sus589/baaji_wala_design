@@ -77,10 +77,7 @@
     color: #7e919e;
     font-size: 21px;
 }
-.sidebar-open{
-    width: calc(100% - 240px);
-    margin-left: 240px;
-}
+
 .all-back{
     background-color: #000;
 }
@@ -119,4 +116,8 @@
    .form-div {
       max-width: 480px;
    }
+   .sidebar-open{
+    width: calc(100% - 240px);
+    margin-left: 240px;
+}
 }

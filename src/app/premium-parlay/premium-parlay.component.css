@@ -1,9 +1,10 @@
 .wrap{
   background: #1c191a;
+  height: auto;
 }
 
 .sportsbook-wrapper{
-  width:400px;
+  /* width:480px; */
   margin:20px auto;
   background:#0b4fa3;
   border-radius:12px;
@@ -98,4 +99,33 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.sportsbook-wrapper{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 80px);
+  max-width: 480px;
+  margin: auto ;
+  margin-top:50px;
+}
+
+
+.sidebar-open{
+    width: calc(100% - 240px);
+    margin-left: 240px;
+}
+   /* Chrome, Edge, Safari */
+   .content-scroll::-webkit-scrollbar {
+     width: 0px;
+     height: 0px;
+   }
+
+   /* Firefox */
+   .content-scroll {
+     scrollbar-width: none;
+   }
+
+   /* IE / Old Edge */
+   .content-scroll {
+     -ms-overflow-style: none;
+   }
 }

@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './left-sidebar.component.css'
 })
 export class LeftSidebarComponent {
-isSidebarOpen = false;
+isSidebarOpen = true;
 
   constructor(private sidebarService: SidebarService) {
     this.sidebarService.sidebarOpen$

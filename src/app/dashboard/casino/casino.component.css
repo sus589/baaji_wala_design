@@ -1,7 +1,6 @@
 .tab {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin: 0 6px;
     margin-top: 55px;
     background: #ffffff;
     border-radius: 5px;
@@ -35,30 +34,29 @@
 
 .tab .tab-search {
     background-color: #ffffff;
+    top: 57px;
     right: 0;
     width: 52px;
-    height: 49px;
+    height: 47px;
     position: absolute;
-    /* transform: translate(-14px, -52px); */
-    transform: translate(-43px, -6px);
 }
 
 .tab .tab-search img {
     filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
-    transform: translate(16px, 12px);
+    display: flex;
+    margin: 15px;
+    position: fixed;
 }
 
-.sidebar-open {
-    width: calc(100% - 250px);
-    margin-left: 240px;
-}
-.img-container{
+
+.img-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 6px;
     grid-gap: 6px;
 }
-.img-list{
+
+.img-list {
     position: relative;
     width: 100%;
     border-top-right-radius: 10px;
@@ -66,24 +64,41 @@
     overflow: hidden;
 }
 
-.img-list img{
+.img-list img {
     width: 100%;
     height: 110px;
 }
 
-@media(min-width:768px){
- .img-container{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 5px;
-  }
-  .img-list img{
-    width: 190px;
+@media(min-width:768px) {
+    .img-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 5px;
+    }
+
+    .img-list img {
+        width: 190px;
+    }
+
+    .img-list {
+        border: none
+    }
+
+    .sidebar-open {
+        width: calc(100% - 250px);
+        margin-left: 240px;
+    }
+
+    .tab .tab-search {
+        top: 63px;
+    }
+    .casino{
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: calc(100vh - 80px);
+    }
 }
-.img-list{
-    border:none
-}
-}
+
 @media(min-width:768px) {
     .tab .tab-search {
         transform: translate(-100px, -7px);
@@ -91,10 +106,11 @@
 
     }
 
-    .tab ul{
+    .tab ul {
         overflow: hidden;
     }
+
     .tab {
-    width: 100%;
+        width: 100%;
     }
 }

@@ -1,5 +1,6 @@
 .bg-light{
   background-color: #6196cf !important;
+  height: auto;
 }
 /* ===== HEADER ===== */
 .exchange-header {
@@ -92,15 +93,20 @@
   text-align:center;
   font-size:14px;
 }
-.sidebar-open{
-    width: calc(100% - 240px);
-    margin-left: 240px;
-}
+
 
 @media(min-width: 768px){
   .bg-light{
   background-image: url('/assets/images/imgi_27_bg-cricket.png');
   background-repeat: no-repeat;
   background-position: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 80px);
+}
+
+.sidebar-open{
+    width: calc(100% - 240px);
+    margin-left: 240px;
 }
 }

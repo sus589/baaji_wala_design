@@ -2,7 +2,7 @@
 <div [class.sidebar-open]="isSidebarOpen" class="all-back">
     <div class="container wrap">
         <div class="row">
-            <div>
+            <div class="content-scroll">
                 <!-- Top Tabs (Live / Upcoming / Leagues / Parlay) -->
                 <div class="container mt-2">
                     <div class="top-tabs">
@@ -122,6 +122,57 @@
 
 
 
+                 <!-- Women’s Premier League (Back / Lay) -->
+                <div class="container mt-3 mb-5" routerLink="/dashboard/match" >
+                    <div class="league-header">
+                        Women_s Premier League
+                        <span class="badge bg-primary">1</span>
+                    </div>
+
+                    <div class="match-card">
+                        <div class="d-flex justify-content-between mb-2" style="background-color: #4b6cb6; color: #fff">
+                            <div>
+                                <i class="bi bi-star star"></i>
+                                <strong>Gujarat Giants W v Delhi Capitals W</strong><br>
+                            </div>
+                        </div>
+
+                        <div class="row text-center fw-bold mb-1">
+
+                            <div class="col-8"> <span class="inplay-btn">In-play</span></div>
+                            <div class="col-2">Back</div>
+                            <div class="col-2">Lay</div>
+                        </div>
+
+                        <div class="row align-items-center mb-2" style="margin: -4px;">
+                            <div class="col-8">Gujarat Giants W</div>
+                            <div class="col-2 back">--</div>
+                            <div class="col-2 lay">--</div>
+                        </div>
+
+                        <div class="row align-items-center" style="margin: -4px;">
+                            <div class="col-8">Delhi Capitals W</div>
+                            <div class="col-2 back">--</div>
+                            <div class="col-2 lay">--</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+               
+
+                
+
+
+
+
+
+
+
+                
+
+
 
 
                 }
@@ -235,7 +286,7 @@
                             <i class="bi bi-chevron-right arrow"></i>
                         </div>
 
-                        <!-- <div class="popular-item">
+                         <div class="popular-item">
                             <div class="left">
                                 <i class="bi bi-bookmark"></i>
                                 <span>Virtual CPL 2026</span>
@@ -265,7 +316,7 @@
                                 <span>Virtual Big Bash 2026</span>
                             </div>
                             <i class="bi bi-chevron-right arrow"></i>
-                        </div> -->
+                        </div> 
 
                     </div>
                 </div>
