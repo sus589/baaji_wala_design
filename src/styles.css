@@ -10,6 +10,6 @@ body{
 } */
  @media (min-width: 992px) {
     .container{
-        padding: 0 55px;
+        padding: 0 45px;
     }
 }

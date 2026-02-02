@@ -1,46 +1,35 @@
 <app-left-sidebar></app-left-sidebar>
-<div [class.sidebar-open]="isSidebarOpen" class="casino" style="height: auto;">
+<div [class.sidebar-open]="isSidebarOpen" class="casino" style="height: 100vh;">
     <div class="container">
         <div class="row">
             <div class="tab">
                 <ul>
-                    <li class="active">
+                    <li [class.active]="activeTab === 'ALL'" (click)="changeTab('ALL')">
                         ALL
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'SEXY'" (click)="changeTab('SEXY')">
+                        SEXY
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'EVO'" (click)="changeTab('EVO')">
+                        EVO
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'PP'" (click)="changeTab('PP')">
+                        PP
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'PT'" (click)="changeTab('PT')">
+                        PT
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'BETGAMES'" (click)="changeTab('BETGAMES')">
+                        BETGAMES
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'EZUGI'" (click)="changeTab('EZUGI')">
+                        EZUGI
                     </li>
-                    <li>
-                        ALL
+                    <li [class.active]="activeTab === 'EVOPLAY'" (click)="changeTab('EVOPLAY')">
+                        EVOPLAY
                     </li>
-                    <li>
-                        ALL
-                    </li>
-                    <li>
-                        ALL
-                    </li>
-                    <li>
-                        ALL
-                    </li>
-                    <li>
-                        ALL
-                    </li>
-                    <div class="tab-search">
+
+                    <div class="tab-search" (click)="openSearchPage()">
                         <img src="assets/images/icon-search-type01.svg" alt="">
                     </div>
                 </ul>
@@ -118,6 +107,7 @@
     <div class="container">
         <div class="row">
             <div class="img-container">
+                @if(activeTab === 'ALL'){
                 <div class="img-list">
                     <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
                 </div>
@@ -162,7 +152,6 @@
                 <div class="img-list">
                     <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
                 </div>
-
                 <div class="img-list">
                     <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
                 </div>
@@ -180,13 +169,6 @@
 
 
 
-                  <div class="img-list">
-                    <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
-                </div>
-
-                <div class="img-list">
-                    <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
-                </div>
                 <div class="img-list">
                     <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
                 </div>
@@ -194,8 +176,112 @@
                 <div class="img-list">
                     <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
                 </div>
+                <div class="img-list">
+                    <img src="assets/images/2025-11-20T13-53-15.219Z-ThaiFishPrawnCrab.png" alt="">
+                </div>
+
+
+                }
+
+                @if(activeTab === 'SEXY'){
+
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                <div class="img-list">
+                    <img src="assets/images/2024-04-04T10-43-40.804Z-PT-LIVE-003.webp" alt="">
+                </div>
+                }
             </div>
         </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container searchpage" [class.show]="isOpenSearchPage" style=" background: #2b2922;"
+        *ngIf="isOpenSearchPage">
+        <div class="searchpage-header">
+            <span class="back-icon" style="background: url('assets/images/icon-arrow-type01.svg');"
+                (click)="closeSearchPage()"></span>
+            <input type="text" placeholder="search game...">
+        </div>
+
+        <div class="filter mt-5" style=" background: #3e3928;">
+            <h3>Provider</h3>
+
+
+            <div class="search-item">
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+                <ul>
+                    <li>SEXY</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <button class="confirm-btn">
+            Confirm
+        </button>
     </div>
 
 </div>

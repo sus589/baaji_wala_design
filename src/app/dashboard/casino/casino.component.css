@@ -23,9 +23,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
-    padding: 0 20px;
+    margin-right: 5px;
+    padding: 0 40px;
     transform: translate(-28px, -1px);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .tab ul li.active {
@@ -69,6 +71,93 @@
     height: 110px;
 }
 
+
+
+.searchpage-header {
+    display: flex;
+    width: 100%;
+
+    padding: 5px;
+}
+
+.back-icon {
+    width: 20px;
+    height: 50px;
+    color: #fff;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    left: 0;
+    transform: translate(48%, 18%);
+}
+
+.searchpage-header input {
+    width: 100%;
+    border-radius: 6px;
+    padding: 6px;
+    margin-left: 20px;
+}
+
+.back-icon::after {
+    display: flex;
+    margin: auto;
+}
+
+.filter {
+    height: auto;
+    border-radius: 6px;
+
+}
+
+.filter h3 {
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.search-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2px;
+    margin: 5px;
+}
+
+.search-item ul {
+    padding: 10px 40px;
+    background: #000;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.search-item ul li {
+    list-style-type: none;
+    color: #fff;
+}
+
+.confirm-btn {
+    background: linear-gradient(180deg, #ffc20f 0%, #f4b600 100%);
+    padding: 12px;
+    width: 100%;
+    font-weight: 400;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 0;
+}
+
+.searchpage {
+    position: fixed;
+    /* right:0; */
+    top: 0;
+    transform: translate(100%);
+    transition: transform 0.3 ease-in;
+    z-index: 99999;
+    height: 100vh;
+}
+
+.show {
+    transform: translateX(0);
+    transition: transform 0.3 ease-in;
+}
+
 @media(min-width:768px) {
     .img-container {
         display: grid;
@@ -86,24 +175,36 @@
 
     .sidebar-open {
         width: calc(100% - 250px);
-        margin-left: 240px;
+        margin-left: 250px;
     }
 
     .tab .tab-search {
-        top: 63px;
+        top: 55px;
+        margin-right: 50px;
     }
-    .casino{
+
+    .casino {
+        position: relative;
         overflow-x: hidden;
         overflow-y: auto;
-        height: calc(100vh - 80px);
+        /* height: calc(100vh - 80px); */
+    }
+
+    .searchpage {
+        max-width: 480px;
+        position: absolute;
+        top: 50px;
+        transform: translate(66%, 0%);
+        padding: 0 ;
+    }
+    .filter{
+        margin: 10px;
     }
 }
 
 @media(min-width:768px) {
     .tab .tab-search {
-        transform: translate(-100px, -7px);
         background: #f4b600;
-
     }
 
     .tab ul {

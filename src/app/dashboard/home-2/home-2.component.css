@@ -41,7 +41,7 @@
    text-align: center;
    color: #fff;
    position: relative;
-   font-size: 14px;
+   /* font-size: 14px; */
    margin: auto;
  }
 
@@ -318,7 +318,12 @@
 
  /* time  */
 
-
+ .sport-item.active {
+     background: #222324;
+    border-radius: 6px;
+    color: #f4b600;
+    padding: 8px;
+ }
 
  @media(min-width:768px) {
    .wrap {
@@ -360,7 +365,7 @@
    }
     .sidebar-open {
    width: calc(100% - 250px);
-   margin-left: 240px;
+   margin-left: 250px;
  }
 
  }

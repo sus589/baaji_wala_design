@@ -1,7 +1,6 @@
-.bg-light{
-  background-color: #6196cf !important;
-  height: auto;
-}
+/* .bg-light{
+  height: 100vh;
+} */
 /* ===== HEADER ===== */
 .exchange-header {
   background:#0b55a5;
@@ -106,7 +105,7 @@
 }
 
 .sidebar-open{
-    width: calc(100% - 240px);
-    margin-left: 240px;
+    width: calc(100% - 250px);
+    margin-left: 250px;
 }
 }

@@ -110,8 +110,8 @@
 
 
 .sidebar-open{
-    width: calc(100% - 240px);
-    margin-left: 240px;
+    width: calc(100% - 250px);
+    margin-left: 250px;
 }
    /* Chrome, Edge, Safari */
    .content-scroll::-webkit-scrollbar {

@@ -155,6 +155,13 @@
 
  /* time  */
 
+
+ .sport-item.active {
+     background: #222324;
+    border-radius: 6px;
+    color: #f4b600;
+ }
+
  @media(min-width:768px) {
      .wrap {
          max-width: 480px;
@@ -200,10 +207,10 @@
          -ms-overflow-style: none;
      }
 
-      .sidebar-open {
-     width: calc(100% - 250px);
-     margin-left: 240px;
- }
+     .sidebar-open {
+         width: calc(100% - 250px);
+         margin-left: 250px;
+     }
 
  }
 

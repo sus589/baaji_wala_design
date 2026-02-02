@@ -7,8 +7,11 @@
     padding: 0;
     position: fixed;
     padding: 20px;
+    z-index: 99;
 }
-
+.sidebar.collapsed{
+    width: 60px;
+}
 .nav-item-head {
     display: flex;
     flex-direction: row;
@@ -25,6 +28,7 @@
     height: 35px;
     position: absolute;
     left:10px;
+    text-align: center;
 }
 
 .nav-item-text {
@@ -32,7 +36,7 @@
     font-size: 14px;
     color: #052753;
     margin: 8px 0;
-  
+
 
 }
 
@@ -42,7 +46,22 @@
     filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
     position: absolute;
     right: 10px;
+
 }
+.sidebar.collapsed .nav-item-icon{
+    left: 5px;
+}
+.sidebar.collapsed .nav-item-text ,
+.sidebar.collapsed .nav-item-arrow{
+    opacity: 0;
+  width: 0;
+  overflow: hidden;
+}
+.sidebar.collapsed .nav-item-head {
+    padding: 0px 16px;
+    margin: 0;
+}
+
 .nav-item-arrow.rotate{
     transform: rotate(-180deg);
     transition: .3s ease-in;

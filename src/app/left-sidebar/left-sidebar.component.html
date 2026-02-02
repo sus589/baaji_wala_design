@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="sidebar" *ngIf="isSidebarOpen">
+    <div class="sidebar"  [class.collapsed]="!isSidebarOpen">
       <div class="nav-item-head active">
         <img class="nav-item-icon" src="assets/images/icon-home.svg" alt="">
         <p class="nav-item-text">Home</p>

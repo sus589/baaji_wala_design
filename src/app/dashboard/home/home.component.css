@@ -51,7 +51,7 @@
 
 .nav-category {
     display: grid;
-    grid-gap: 5.53973px;
+    grid-gap: 4.53973px;
     grid-template-columns: repeat(4, 1fr);
     overflow: hidden;
 }
@@ -245,20 +245,17 @@ h3 {
     width: calc(100% - 250px);
     margin-left: 250px;
 }
-
+ .nav-category {
+        display: grid;
+        grid-gap: 4.53973px;
+        grid-template-columns: repeat(8, 1fr);
+    }
 }
 
 @media(min-width:1024px) {
     .col-lg-2 {
         width: 8%;
     }
-
-    .nav-category {
-        display: grid;
-        grid-gap: 1.4.53973px;
-        grid-template-columns: repeat(8, 1fr);
-    }
-
     .col-md-21 {
         width: 60.666667%;
     }
