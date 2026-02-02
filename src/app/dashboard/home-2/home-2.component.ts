@@ -29,4 +29,22 @@ isSidebarOpen = false;
   // tbChange(tab:any){
   //  this.competitionTab = tab; 
   // }
+
+  activeMainTab:  'live' | 'upcoming' | 'league' = 'live';
+  activeSubTab: 'fav' | 'cricket' | 'soccer' | 'tennis' = 'fav';
+
+  setMainTab(tab : any){
+    this.activeMainTab = tab;
+    this.activeSubTab = 'fav';
+  }
+
+  setSubTab(tab: any){
+    this.activeSubTab = tab;
+  }
+
+   isCollapse : boolean = false;
+
+  setCollapse(){
+    this.isCollapse = !this.isCollapse;
+  }
 }

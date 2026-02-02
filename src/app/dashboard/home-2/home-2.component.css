@@ -325,6 +325,17 @@
     padding: 8px;
  }
 
+ .icons-left {
+     display: flex;
+     justify-content: space-between;
+     gap: 5px;
+ }
+ .container-fluid .league-box .match-item.active{
+    display: none;
+ }
+ .container .match-card.active{
+    display: none;
+ }
  @media(min-width:768px) {
    .wrap {
      max-width: 480px;

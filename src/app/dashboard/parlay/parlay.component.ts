@@ -6,23 +6,40 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-parlay',
-  imports: [LeftSidebarComponent , RouterLink , CommonModule],
+  imports: [LeftSidebarComponent, RouterLink, CommonModule],
   templateUrl: './parlay.component.html',
   styleUrl: './parlay.component.css'
 })
 export class ParlayComponent {
-isSidebarOpen = false;
+  isSidebarOpen = false;
 
   constructor(private sidebarService: SidebarService) {
     this.sidebarService.sidebarOpen$
       .subscribe(state => this.isSidebarOpen = state);
   }
 
-  activeTab : string = 'live';
+  activeFilter: any = 'competition';
 
   changeTab(event:Event){
-    // this.activeTab = tab;
     const  value = (event.target as HTMLSelectElement).value;
-    this.activeTab = value;
+    this.activeFilter = value;
+  }
+
+  activeParlayTab: string = 'parlay';
+  activeSubTab: string = 'all';
+
+  setMainTab(tab: any) {
+    this.activeParlayTab = tab;
+    this.activeSubTab = 'all';
+  }
+
+  setSubTab(tab: any) {
+    this.activeSubTab = tab;
+  }
+
+  isCollapse : boolean = false;
+
+  setCollapse(){
+    this.isCollapse = !this.isCollapse;
   }
 }

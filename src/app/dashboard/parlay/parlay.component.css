@@ -158,10 +158,21 @@
 
  .sport-item.active {
      background: #222324;
-    border-radius: 6px;
-    color: #f4b600;
+     border-radius: 6px;
+     color: #f4b600;
  }
 
+ .icons-left {
+     display: flex;
+     justify-content: space-between;
+     gap: 5px;
+ }
+ .container  .match-card.collapse{
+    display: none;
+ }
+ .league-header .icons-left .bi.rotate{
+    transform: rotate(-180deg);
+ }
  @media(min-width:768px) {
      .wrap {
          max-width: 480px;
