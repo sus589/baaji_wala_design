@@ -9,14 +9,14 @@
       </div>
 
       <div class="desktop-logo">
-        <div class="sports-btn" routerLink="dashboard/sports">
+        <div class="sports-btn" routerLink="dashboard/sports" [class.visible]="!isSidebarOpen">
           <img src="assets/images/icon-cricket.svg" alt="">
           <p>Cricket</p>
         </div>
 
 
         <div class="toggle-btn" (click)="onDesktopBtnClick()">
-          <img src="assets/images/accordion-arrow.svg" alt="">
+          <img src="assets/images/accordion-arrow.svg" alt="" [class.rotate]="isSidebarOpen">
         </div>
         <img src="assets/images/Logo.svg" alt="" routerLink="dashboard/home">
       </div>

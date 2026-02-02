@@ -9,9 +9,11 @@
     padding: 20px;
     z-index: 99;
 }
-.sidebar.collapsed{
+
+.sidebar.collapsed {
     width: 60px;
 }
+
 .nav-item-head {
     display: flex;
     flex-direction: row;
@@ -19,15 +21,18 @@
     padding: 4px 34px 4px 46px;
     position: relative;
 }
-.nav-item-head.active{
-    background: linear-gradient(270deg, rgba(255, 184, 12, .3) 0%, rgba(255, 184, 12, .4) 100%);;
+
+.nav-item-head.active {
+    background: linear-gradient(270deg, rgba(255, 184, 12, .3) 0%, rgba(255, 184, 12, .4) 100%);
+    ;
 }
+
 .nav-item-icon {
     filter: invert(27%) sepia(96%) saturate(1894%) hue-rotate(197deg) brightness(61%) contrast(101%);
     width: 20px;
     height: 35px;
     position: absolute;
-    left:10px;
+    left: 10px;
     text-align: center;
 }
 
@@ -48,58 +53,69 @@
     right: 10px;
 
 }
-.sidebar.collapsed .nav-item-icon{
+
+.sidebar.collapsed .nav-item-icon {
     left: 5px;
 }
-.sidebar.collapsed .nav-item-text ,
-.sidebar.collapsed .nav-item-arrow{
+
+.sidebar.collapsed .nav-item-text,
+.sidebar.collapsed .nav-item-arrow {
     opacity: 0;
-  width: 0;
-  overflow: hidden;
+    width: 0;
+    overflow: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+
 .sidebar.collapsed .nav-item-head {
     padding: 0px 16px;
     margin: 0;
 }
 
-.nav-item-arrow.rotate{
+.nav-item-arrow.rotate {
     transform: rotate(-180deg);
     transition: .3s ease-in;
 }
+
 /* @media(min-width:768px){
     .sidebar{
         display: block;
     }
 } */
 
- .nav-item-head-collape ul li{
-   list-style-type: none;
-   position: relative;
- }
-  .nav-item-head-collape ul li img{
+.nav-item-head-collape ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.nav-item-head-collape ul li img {
     width: 20px;
     height: 20px;
     position: absolute;
     transform: translate(-55px, 10px);
-  }
- .nav-item-head-collape ul li p{
+}
+
+.nav-item-head-collape ul li p {
     color: #052753;
     font-size: 12px;
     font-weight: 400;
-     transform: translate(-10px, 10px);
- }
-.list-items{
+    transform: translate(-10px, 10px);
+}
+
+.list-items {
     display: flex;
     padding: 8px;
     justify-content: space-around;
 }
-.nav-item-head-collape ul{
+
+.nav-item-head-collape ul {
     background: #f2f2f2;
     padding: 0;
 }
 
-@media(max-width:992px){
-    .sidebar{
+@media(max-width:992px) {
+    .sidebar {
         display: none;
     }
 }

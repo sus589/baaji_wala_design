@@ -76,11 +76,9 @@
 }
 
 .desktop-logo-right {
-    /* position: fixed; */
     position: absolute;
-    right: 0;
-    transform: translate(-11px, -43px);
-
+    right: 11px;
+    top: 9px;
 }
 
 .desktop-logo-right img {
@@ -110,7 +108,13 @@
 
 /* tips 1 end */
 
+.sports-btn.visible{
+    display:none;
+}
 
+.desktop-logo .toggle-btn img.rotate{
+    transform: rotate(180deg);
+}
 
 @media(min-width:768px) {
     .desktop-btn {
@@ -127,7 +131,7 @@
     }
 
     .desktop-logo-right {
-        transform: translate(-11px, 12px);
+        /* transform: translate(-11px, 12px); */
     }
 
     .desktop-logo .toggle-btn img {
