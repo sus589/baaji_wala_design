@@ -36,7 +36,7 @@
             <!-- </div> -->
         <!-- </div> -->
 
-        <div class="container">
+        <div class="container" [class.sidebar-open]="isSidebarOpen">
             <div class="row">
                 <div class="nav-container">
                     <div class="col col-sm-3 col-md-2 col-lg-2 col-xl-2">
@@ -95,7 +95,7 @@
             </div>
         </div>
 
-        <div class="container pt-2">
+        <div class="container pt-2" [class.sidebar-open]="isSidebarOpen">
             <div class="row">
                 @if(activeTab === 'hot-game'){
                 <div class="nav-category">
@@ -305,7 +305,7 @@
 
             </div>
         </div>
-        <div class="container">
+        <div class="container" [class.sidebar-open]="isSidebarOpen">
             <div class="row">
                 <h3>Favourites</h3>
                 <div class="favourite ">
@@ -322,7 +322,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container" [class.sidebar-open]="isSidebarOpen">
             <div class="row">
                 <div class="recommendation">
                     <span></span>
