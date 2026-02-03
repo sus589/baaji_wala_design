@@ -70,8 +70,11 @@
     height: 50px;
     margin: auto;
     display: flex;
+    transition: all 0.3 ease;
 }
-
+.nav-cont-small-div img:hover{
+transform: scale(1.4);
+}
 .nav-cont-small-div p {
     font-size: 13px;
     color: #0e2749;
@@ -92,11 +95,18 @@
 }
 
 .img-cont img {
-    width: 250px;
+    min-width: 250px;
     height: 150px;
     border-radius: 5px;
-    transition: transform .3s ease-in;
-    transform: scale(1);
+    transition: all .3s ease-in;
+}   
+
+/* .img-cont img:hover{
+   transform: scale(1.1);
+} */
+ 
+.carousel-indicators{
+    display: none;
 }
 
 .recommendation h3 {
@@ -242,8 +252,12 @@ h3 {
     }
     
   .sidebar-open {
-    width: calc(100% - 120px);
-    margin-left: 160px;
+    width: calc(100% - 170px);
+    margin-left: 165px;
+}
+.carousel-open{
+    width: calc(100% - 85px);
+    margin-left: 90px;
 }
  .nav-category {
         display: grid;
@@ -287,8 +301,7 @@ h3 {
         margin: 0px 80px;
     }
      .container.sidebar-open{
-        /* max-width: 1420px;
-        margin: 0;
-        margin: 0px 20px; */
+        width: calc(100% - 120px);
+       margin: 0px 100px;
     }
 }
