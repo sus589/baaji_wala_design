@@ -72,9 +72,11 @@
     display: flex;
     transition: all 0.3 ease;
 }
-.nav-cont-small-div img:hover{
-transform: scale(1.4);
+
+.nav-cont-small-div img:hover {
+    transform: scale(1.4);
 }
+
 .nav-cont-small-div p {
     font-size: 13px;
     color: #0e2749;
@@ -99,13 +101,13 @@ transform: scale(1.4);
     height: 150px;
     border-radius: 5px;
     transition: all .3s ease-in;
-}   
+}
 
 /* .img-cont img:hover{
    transform: scale(1.1);
 } */
- 
-.carousel-indicators{
+
+.carousel-indicators {
     display: none;
 }
 
@@ -250,19 +252,42 @@ h3 {
     .nav-cont-small-div {
         width: 165px;
     }
-    
-  .sidebar-open {
-    width: calc(100% - 170px);
-    margin-left: 165px;
-}
-.carousel-open{
-    width: calc(100% - 85px);
-    margin-left: 90px;
-}
- .nav-category {
+
+    .sidebar-open {
+        width: calc(100% - 170px);
+        margin-left: 165px;
+    }
+
+    .carousel-open {
+        width: calc(100% - 85px);
+        margin-left: 90px;
+    }
+
+    .nav-category {
         display: grid;
         grid-gap: 4.53973px;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .container {
+        max-width: 672px;
+        margin: 0px 78px;
+    }
+
+    .recommendation {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
+    .carousel-item img {
+        width: 100% !important;
+        height: 300px;
+    }
+
+    .container.sidebar-open {
+        width: calc(100% - 96px);
+        margin: 0px 93px;
     }
 }
 
@@ -270,6 +295,7 @@ h3 {
     .col-lg-2 {
         width: 8%;
     }
+
     .col-md-21 {
         width: 60.666667%;
     }
@@ -293,15 +319,38 @@ h3 {
         width: 30px;
         height: 30px;
     }
+
+    .container {
+        max-width: 975px;
+        margin: 0px 62px;
+    }
+
+    .nav-category {
+        display: grid;
+        grid-gap: 4.53973px;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .container.sidebar-open {
+        width: calc(100% - 79px);
+        margin: 0px 85px;
+    }
 }
 
 @media (min-width: 1400px) {
-    .container{
+    .container {
         max-width: 1420px;
         margin: 0px 80px;
     }
-     .container.sidebar-open{
+
+    .container.sidebar-open {
         width: calc(100% - 120px);
-       margin: 0px 100px;
+        margin: 0px 100px;
+    }
+
+    .nav-category {
+        display: grid;
+        grid-gap: 4.53973px;
+        grid-template-columns: repeat(8, 1fr);
     }
 }
