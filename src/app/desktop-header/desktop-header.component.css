@@ -108,14 +108,64 @@
 
 /* tips 1 end */
 
-.sports-btn.visible{
-    display:none;
+.sports-btn.visible {
+    display: none;
 }
 
-.desktop-logo .toggle-btn img.rotate{
+.desktop-logo .toggle-btn img.rotate {
     transform: rotate(90deg);
 }
+.bal{
+    background: #f4b600;
+    width: 75px;
+    height: 32px;
+    border-radius: 4px;
+    padding: 0px;
+}
+.bal img{
+    position: absolute;
+    transform: translate(1px,8px);
+}
+.bal p{
+    color: #0f2649;
+    position: absolute;
+    transform: translate(20px, 6px);
+    font-size: 13px;
+    font-weight: 500;
+}
 
+.exp {
+    color: #fff;
+    background: #e62626;
+    width: 71px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+.main-wallet{
+    display: flex;
+    background: #fff;
+    border-radius: 6px;
+    width: 180px;
+    justify-content: space-around;
+    height: 30px;
+}
+.main-wallet img{
+    filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(200deg);
+    width: 20px;
+    margin: auto;
+}
+
+.main-wallet p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f2649;
+    margin: auto;
+}
 @media(min-width:768px) {
     .desktop-btn {
         display: none;
