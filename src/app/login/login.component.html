@@ -9,7 +9,7 @@
       <div class="img-container">
          <img src="assets/images/baajilogin.jpeg" alt="">
       </div>
-
+<!-- 
       <div class="form-div">
          <div class="form-container">
             <label for="">Username</label>
@@ -36,6 +36,41 @@
          </button>
 
          <span class="any-question">Do not have any account? <a href="https://bjwala.com/rd/1.php">Sign up</a></span>
-      </div>
+      </div> -->
+
+
+
+
+      
+      <form class="form-div" [formGroup]="loginForm" (ngSubmit)="submit()">
+         <div class="form-container">
+            <label for="">Username</label>
+            <input type="text" placeholder="userid" formControlName="userid">
+            <small *ngIf="loginForm.get('userid')?.invalid && loginForm.get('userid')?.touched">invalid username</small>
+         </div>
+
+
+
+         <div class="form-container">
+            <label for="">Password</label>
+            <input type="password" placeholder="Password" formControlName="pass">
+            <img src="assets/images/icon-eye-close-type.svg" alt="">
+            <small *ngIf="loginForm.get('pass')?.invalid && loginForm.get('pass')?.touched">enter correct password</small>
+         </div>
+
+
+         <div class="form-container">
+            <label for="">Validation</label>
+            <input type="number" placeholder="validation" maxlength="4" formControlName="validCode">
+            <span class="validation-code">5667</span>
+            <small *ngIf="loginForm.get('validCode')?.invalid && loginForm.get('validCode')?.touched">enter correct validation code</small>
+         </div>
+
+         <button class="login-btn" type="submit">
+            <h3>Login</h3>
+         </button>
+
+         <span class="any-question">Do not have any account? <a href="https://bjwala.com/rd/1.php">Sign up</a></span>
+      </form>
    </div>
 </div>
